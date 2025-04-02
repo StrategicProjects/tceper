@@ -1,0 +1,22 @@
+Package: tceper
+Type: Package
+Title: Access to Open Data from the Pernambuco State Court of Accounts (TCE-PE)
+Version: 0.1.0
+Authors@R: c(
+            person("Andre", "Leite", email = "leite@castlab.org", role = c("aut", "cre")),
+            person("Hugo", "Vaconcelos", email = "hugo.vasconcelos@ufpe.br", role = "aut"),
+            person("Diogo", "Bezerra", email = "diogo.bezerra@ufpe.br", role = "aut"))
+Description: Provides functions to access, download, and process open datasets published by the Pernambuco State Court of Accounts (TCE-PE), through its official Open Data portal. The datasets include information on bids, contracts, expenses, agreements, and other public data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+LazyData: true
+RoxygenNote: 7.3.2
+Depends:
+   R (>= 4.1.0)
+Imports:
+    dplyr,
+    tibble,
+    httr2
+URL: <https://github.com/StrategicProjects/tceper>
+Config/Needs/website: tidyverse/tidytemplate
