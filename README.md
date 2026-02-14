@@ -1,264 +1,122 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+# tceper <a href="https://monitoramento.sepe.pe.gov.br/tcepe/"><img src="man/figures/logo.svg" align="right" alt="tceper website" /></a>
 
-# tceper <a href="https://github.com/StrategicProjects/bigdatape"><img src="man/figures/logo.png" align="right" height="106" alt="BigDataPE website" /></a>
+`tceper` is an R client for the TCE-PE (Tribunal de Contas do Estado de Pernambuco) Open Data API.
 
-<!-- badges: start -->
-
-<!-- ![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/BigDataPE)&nbsp;  -->
-
-<!-- ![CRAN&nbsp;Downloads](https://cranlogs.r-pkg.org/badges/grand-total/BigDataPE)&nbsp; -->
-
-![License](https://img.shields.io/badge/license-MIT-darkviolet.svg) 
-![](https://img.shields.io/badge/devel%20version-0.1.0-orangered.svg)
-
-<!-- badges: end -->
-
-**BigDataPE** is an R package that provides a secure and intuitive way
-to access datasets from the BigDataPE platform. The package allows users
-to fetch data from the API using token-based authentication, manage
-multiple tokens for different datasets, and retrieve data efficiently
-using chunking.
-
-> **Note:** To access the **BigDataPE API**, you must be connected to
-> the “PE Conectado” network or use a VPN.
+The package provides a structured, discoverable interface to query public procurement, contracts, suppliers, revenues, expenditures, and other public datasets made available by TCE-PE.
 
 ## Installation
 
-You can install the `BigDataPE` package directly from GitHub:
-
 ``` r
-# Install the devtools package if you haven't already
-install.packages("devtools")
-
-# Install BigDataPE from GitHub
-devtools::install_github("StrategicProjects/bigdatape")
+# install.packages("remotes")
+remotes::install_github("StrategicProjects/tceper")
 ```
 
-After installation, load the package:
+---
+
+## 🔎 Explore the API First
+
+Before querying any endpoint, you can explore the built-in API catalog directly from R.
 
 ``` r
-library(BigDataPE)
+library(ibger)
 ```
 
-## Features
+This is the recommended workflow.
 
-- Securely store and manage API tokens with the environment variables.
-- Fetch data from the BigDataPE API using a simple interface.
-- Retrieve large datasets iteratively using chunking.
-- Easily manage multiple datasets and their associated tokens.
+### 1️⃣ View the full catalog
 
-## Functions Overview
-
-### 1. Store Token: `bdpe_store_token`
-
-This function securely stores an authentication token for a specific
-dataset.
-
-``` r
-bdpe_store_token(base_name, token)
+```r
+tce_catalog()
 ```
 
-**Parameters**:
+Returns the full structured catalog of endpoints available in the API.
 
-- `base_name`: The name of the dataset.
-- `token`: The authentication token for the dataset.
+You can also search by keyword:
 
-**Example**:
-
-``` r
-bdpe_store_token("education_dataset", "your-token-here")
+```r
+tce_catalog(search = "contrato")
 ```
 
-------------------------------------------------------------------------
+This helps you identify the correct endpoint name before querying.
 
-### 2. Retrieve Token: `bdpe_get_token`
+---
 
-This function retrieves the securely stored token for a specific
-dataset.
+### 2️⃣ Inspect input parameters
 
-``` r
-bdpe_get_token(base_name)
+```r
+tce_params("Contratos")
 ```
 
-**Parameters**:
+Returns a tibble with:
 
-- `base_name`: The name of the dataset.
+- `api_name` – official API parameter name  
+- `r_name` – snake_case version for use in R  
+- `required` – whether the parameter is required  
+- `type` – parameter type (default: "character")  
+- `description` – description provided by the API  
 
-**Example**:
+Example:
 
-``` r
-token <- bdpe_get_token("education_dataset")
+```r
+tce_params("Municipios")
 ```
 
-------------------------------------------------------------------------
+---
 
-### 3. Remove Token: `bdpe_remove_token`
+### 4️⃣ Inspect output fields
 
-This function removes the token associated with a specific dataset.
-
-``` r
-bdpe_remove_token(base_name)
+```r
+tce_fields("Contratos")
 ```
 
-**Parameters**:
+Returns the expected output columns for that endpoint.
 
-- `base_name`: The name of the dataset.
+---
 
-**Example**:
+## 🚀 Querying Data
 
-``` r
-bdpe_remove_token("education_dataset")
+After inspecting parameters, you can query using either:
+
+- Official API parameter names
+- Snake_case names (`r_name`)
+
+Example:
+
+```r
+tce_contracts(codigo_efisco_ug = "510101")
 ```
 
-------------------------------------------------------------------------
+Or directly via the low-level function:
 
-### 4. List Tokens: `bdpe_list_tokens`
-
-This function lists all datasets with stored tokens.
-
-``` r
-bdpe_list_tokens()
+```r
+tce_request("Contratos", codigo_efisco_ug = "510101")
 ```
 
-**Example**:
+---
 
-``` r
-datasets <- bdpe_list_tokens()
-print(datasets)
+## 🔍 Verbose Mode (Recommended for Exploration)
+
+You can inspect the final request URL and get helper commands:
+
+```r
+tce_contracts(codigo_efisco_ug = "510101", verbose = TRUE)
 ```
 
-------------------------------------------------------------------------
+Verbose mode prints:
 
-### 5. Fetch Data: `bdpe_fetch_data`
+- The final API URL
+- The command to inspect parameters (`tce_params("...")`)
+- The command to inspect output fields (`tce_fields("...")`)
 
-This function retrieves data from the BigDataPE API using securely
-stored tokens.
+---
 
-``` r
-bdpe_fetch_data(
-  base_name, 
-  limit = 100, 
-  offset = 0, 
-  query = list(), 
-  endpoint = "https://www.bigdata.pe.gov.br/api/buscar")
-```
+## 🧠 Recommended Workflow
 
-**Parameters**:
+1. `tce_catalog()` → find the endpoint  
+2. `tce_params("Endpoint")` → inspect inputs  
+3. `tce_fields("Endpoint")` → inspect outputs  
+4. Query using `tce_request()` or a wrapper function  
 
-- `base_name`: The name of the dataset.
-- `limit`: Number of records per page. Default is `Inf`
-- `offset`: Starting record for the query. Default is 0.
-- `query`: Additional query parameters.
-- `endpoint`: The API endpoint URL.
 
-**Example**:
 
-``` r
-data <- bdpe_fetch_data("education_dataset", limit = 50)
-```
-
-------------------------------------------------------------------------
-
-### 6. Fetch Data in Chunks: `bdpe_fetch_chunks`
-
-This function retrieves data from the API iteratively in chunks.
-
-``` r
-bdpe_fetch_chunks(
-  base_name, 
-  total_limit = Inf, 
-  chunk_size = 100, 
-  query = list(), 
-  endpoint = "https://www.bigdata.pe.gov.br/api/buscar")
-```
-
-**Parameters**:
-
-- `base_name`: The name of the dataset.
-- `total_limit`: Maximum number of records to fetch. Default is `Inf`
-  (fetch all available data).
-- `chunk_size`: Number of records per chunk. Default is 50.000
-- `query`: Additional query parameters.
-- `endpoint`: The API endpoint URL.
-
-**Example**:
-
-``` r
-# Fetch up to 500 records in chunks of 100
-data <- bdpe_fetch_chunks(
-          "education_dataset", 
-          total_limit = 500, 
-          chunk_size = 100)
-
-# Fetch all available data in chunks of 200
-all_data <- bdpe_fetch_chunks(
-              "education_dataset", 
-              chunk_size = 200)
-```
-
-------------------------------------------------------------------------
-
-### 7. Construct URL with Query Parameters: `parse_queries`
-
-This internal function constructs a URL with query parameters.
-
-``` r
-parse_queries(url, query_list)
-```
-
-**Parameters**:
-
-- `url`: The base URL.
-- `query_list`: A list of query parameters.
-
-**Example**:
-
-``` r
-url <- parse_queries(
-            "https://www.example.com", 
-            list(param1 = "value1", param2 = "value2")
-            )
-print(url)
-```
-
-------------------------------------------------------------------------
-
-## Example Workflow
-
-Here’s a complete example workflow:
-
-``` r
-# Store a token for a dataset
-bdpe_store_token("education_dataset", "your-token-here")
-
-# Fetch 100 records starting from the first record
-data <- bdpe_fetch_data("education_dataset", limit = 100, offset = 0)
-
-# Fetch data in chunks
-all_data <- bdpe_fetch_chunks(
-  "education_dataset", 
-  total_limit = 500, 
-  chunk_size = 100)
-
-# List all datasets with stored tokens
-datasets <- bdpe_list_tokens()
-
-# Remove a token
-bdpe_remove_token("education_dataset")
-```
-
-------------------------------------------------------------------------
-
-## Contributing
-
-If you find any issues or have feature requests, feel free to create an
-issue or a pull request on
-[GitHub](https://github.com/StrategicProjects/bigdatape).
-
-------------------------------------------------------------------------
-
-## License
-
-This package is licensed under the MIT License. See the `LICENSE` file
-for more details.

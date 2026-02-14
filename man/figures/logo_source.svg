@@ -6,7 +6,7 @@
    data-pikchr-date="20250321215505"
    version="1.1"
    id="svg1"
-   sodipodi:docname="logo.svg"
+   sodipodi:docname="logo_source.svg"
    xml:space="preserve"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -22,18 +22,18 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="11.504193"
-     inkscape:cx="32.292574"
+     inkscape:cx="32.336036"
      inkscape:cy="39.203098"
      inkscape:window-width="1744"
-     inkscape:window-height="1027"
+     inkscape:window-height="1021"
      inkscape:window-x="57"
-     inkscape:window-y="25"
+     inkscape:window-y="31"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg1" /><defs
      id="defs1" /><def><style
        type="text/css">@import url(https://fonts.googleapis.com/css2?family=Abel:wght@400);</style></def><path
      d="m 33.336899,2.16 31.1769,18 v 36 l -31.1769,18 -31.1769003,-18 v -36 z"
-     style="fill:none;stroke:#193d6f;stroke-width:2.16;stroke-linejoin:round"
+     style="fill:#d5f6ff;stroke:#193d6f;stroke-width:2.16;stroke-linejoin:round"
      id="path1" /><text
      lengthAdjust="spacingAndGlyphs"
      x="33.3369"

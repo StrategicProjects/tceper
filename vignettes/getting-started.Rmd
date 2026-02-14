@@ -1,0 +1,162 @@
+---
+title: "Getting started with tceper"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with tceper}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+## Overview
+
+**tceper** is an R client for the TCE-PE (Tribunal de Contas do Estado de Pernambuco) Open Data API.
+
+The package wraps the official endpoints into user-friendly functions that:
+
+- accept `snake_case` arguments (mapped to the API's expected query names), and
+- return tibbles (with optional `snake_case` output column names).
+
+## Installation
+
+```{r install}
+# install.packages("remotes")
+remotes::install_github("StrategicProjects/tceper")
+```
+
+## Load the package
+
+```{r setup}
+library(tceper)
+```
+
+## Explore endpoints before querying
+
+### List endpoints
+
+```{r catalog}
+tce_catalog()
+```
+
+Filter by keyword:
+
+```{r catalog-search}
+tce_catalog(search = "contrat")
+```
+
+### Inspect input parameters
+
+```{r params}
+tce_params("Contratos")
+```
+
+### Inspect output fields
+
+```{r fields}
+tce_fields("Contratos")
+```
+
+## Quick queries
+
+### Municipalities
+
+The `Municipios` endpoint is exposed as `tce_municipalities()`.
+
+```{r municipalities}
+tce_municipalities()
+```
+
+You can filter by state (UF) or by municipality name:
+
+```{r municipalities-filter}
+tce_municipalities(unidadefederativa = "PE")
+tce_municipalities(municipio = "Recife")
+```
+
+### Contracts
+
+```{r contracts}
+tce_contracts(codigo_efisco_ug = "510101")
+```
+
+You can add additional filters. Use `tce_params("Contratos")` to see what is allowed.
+
+```{r contracts-filter}
+tce_contracts(codigo_efisco_ug = "510101", ano_contrato = "2025")
+```
+
+### Suppliers
+
+The `Fornecedores` endpoint is exposed as `tce_suppliers()`.
+
+```{r suppliers}
+tce_suppliers(cpfcnpj = "25173110000186")
+tce_suppliers(nome = "eireli")
+```
+
+## Verbose mode (recommended while exploring)
+
+When `verbose = TRUE`, the package prints:
+
+- the final API URL, and
+- helper commands to inspect inputs/outputs for the endpoint.
+
+```{r verbose}
+tce_bids(anomodalidade = "2025", verbose = TRUE)
+```
+
+## Keeping original output field names
+
+By default, output columns are converted to `snake_case`. To keep the original
+names from the API:
+
+```{r clean-names}
+tce_municipalities(clean_names = FALSE)
+```
+
+## Handling the 10,000-record limit
+
+The API returns at most **10,000 records** per request. When this limit is
+reached, `tceper` issues a warning.
+
+To work around this, apply filters to narrow your query:
+
+```{r limits}
+# Avoid unfiltered requests that may hit 10k limit:
+# tce_municipal_expenditures()
+
+# Choose a municapality code: 
+
+tce_municipalities() %>% 
+  filter(str_detect(municipio, "Pesqueira")) %>% 
+  glimpse()
+# Rows: 1
+# Columns: 5
+# $ codigoibge        <chr> "2610905"
+# $ codigo            <chr> "P113"
+# $ unidadefederativa <chr> "PE"
+# $ municipio         <chr> "Pesqueira"
+# $ codigosagres      <chr> "5408"
+
+# Filter by municipality and year:
+tce_municipal_expenditures(
+  codigo_municipio = "P113", # Pesqueira
+  ano_referencia   = "2025"
+)
+```
+
+## Direct access to any endpoint
+
+If you prefer to call an endpoint directly, use `tce_request()` and pass the
+API query names (as shown by `tce_params()`):
+
+```{r request}
+tce_request("Contratos", CodigoEfiscoUG = "510101", AnoContrato = "2025")
+```
