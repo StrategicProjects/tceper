@@ -1,6 +1,6 @@
 Package: tceper
 Title: Access the Open Data 'API' of TCE-PE (Pernambuco Court of Accounts)
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
     person("Andre", "Leite", email = "leite@castlab.org", role = c("aut", "cre")),
     person("Marcos", "Wasilew", email = "marcos.wasilew@gmail.com", role = "aut"),
@@ -17,7 +17,7 @@ Description: An R interface to the Open Data 'API' of the Tribunal de Contas do
     default. Uses 'httr2' for 'HTTP' requests and 'cli' for user-friendly
     messages.
 License: MIT + file LICENSE
-URL: https://github.com/StrategicProjects/tceper, https://seu-usuario.github.io/tceper/
+URL: https://github.com/StrategicProjects/tceper
 BugReports: https://github.com/StrategicProjects/tceper/issues
 Encoding: UTF-8
 Language: en
@@ -38,6 +38,7 @@ Suggests:
     knitr,
     rmarkdown,
     dplyr,
+    stringr,
     ggplot2
 Config/testthat/edition: 3
 VignetteBuilder: knitr

@@ -7,11 +7,23 @@
 tce_endpoint(endpoint)
 }
 \arguments{
-\item{endpoint}{Endpoint name (e.g., "Municipios", "LicitacaoUG").}
+\item{endpoint}{Endpoint name (e.g., \code{"Municipios"}, \code{"LicitacaoUG"},
+\code{"Contratos"}). Use \code{\link[=tce_catalog]{tce_catalog()}} to see all available endpoints.}
 }
 \value{
-A list with endpoint metadata, including \code{entrada} and \code{saida} when available.
+A list with endpoint metadata, including \code{entrada} (input
+parameters) and \code{saida} (output fields) when available.
 }
 \description{
-Get the catalog entry for a given endpoint
+Returns the full metadata for a single endpoint, including its input
+parameters (\code{entrada}) and output fields (\code{saida}). Useful for
+programmatic access to endpoint metadata.
+}
+\examples{
+\dontrun{
+tce_endpoint("Contratos")
+}
+}
+\seealso{
+\code{\link[=tce_catalog]{tce_catalog()}}, \code{\link[=tce_params]{tce_params()}}, \code{\link[=tce_fields]{tce_fields()}}
 }

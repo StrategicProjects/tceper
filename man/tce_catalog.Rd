@@ -2,16 +2,30 @@
 % Please edit documentation in R/introspection.R
 \name{tce_catalog}
 \alias{tce_catalog}
-\title{List available endpoints}
+\title{List available API endpoints}
 \usage{
 tce_catalog(search = NULL)
 }
 \arguments{
-\item{search}{Optional text to filter by endpoint name/description.}
+\item{search}{Optional character string to filter endpoints by name or
+description (case-insensitive). For example, \code{search = "licit"} returns
+all procurement-related endpoints.}
 }
 \value{
-A tibble with endpoint names and basic metadata.
+A tibble with columns \code{endpoint}, \code{group}, \code{title}, and \code{url}.
 }
 \description{
-List available endpoints
+Returns a tibble listing all 71 endpoints available in the TCE-PE Open
+Data API, with their group, description and URL. Use \code{search} to filter
+by keyword.
+}
+\examples{
+\dontrun{
+tce_catalog()
+tce_catalog(search = "contrat")
+tce_catalog(search = "municipio")
+}
+}
+\seealso{
+\code{\link[=tce_params]{tce_params()}}, \code{\link[=tce_fields]{tce_fields()}}, \code{\link[=tce_endpoint]{tce_endpoint()}}
 }

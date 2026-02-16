@@ -217,7 +217,6 @@ tce_cache_key <- function(endpoint, ..., call = rlang::caller_call()) {
 
   # Map user-friendly names to the API's official parameter names
   params <- .tce_map_params(endpoint, params)
-  params <- .tce_map_params(endpoint, params)
 
   if (length(params) == 0L) {
     return(endpoint)

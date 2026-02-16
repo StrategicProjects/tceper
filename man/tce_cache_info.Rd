@@ -9,12 +9,18 @@ tce_cache_info()
 \value{
 A \link[tibble:tibble-package]{tibble} with columns \code{key}, \code{rows},
 \code{cached_at} and \code{age_secs}, or an empty tibble if the cache is empty.
+The cache TTL is controlled by \code{getOption("tceper.cache_ttl", 3600)}.
 }
 \description{
-List all currently cached entries and their age.
+Returns a tibble describing all currently cached entries, including
+the cache key (endpoint + parameters), row count, timestamp and age.
+Useful for understanding what is cached and when it will expire.
 }
 \examples{
 \dontrun{
 tce_cache_info()
 }
+}
+\seealso{
+\code{\link[=tce_cache_clear]{tce_cache_clear()}}
 }

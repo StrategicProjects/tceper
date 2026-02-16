@@ -12,6 +12,8 @@
 #'   `snake_case`.
 #'
 #' @return A [tibble][tibble::tibble-package].
+#' @seealso [tce_params()] to discover available parameters,
+#'   [tce_fields()] to see output columns.
 #' @export
 #' @family expenditures
 #'

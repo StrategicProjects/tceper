@@ -34,6 +34,9 @@ tce_state_expenditures(id_unidade_gestora = "510101")
 }
 }
 \seealso{
+\code{\link[=tce_params]{tce_params()}} to discover available parameters,
+\code{\link[=tce_fields]{tce_fields()}} to see output columns.
+
 Other expenditures: 
 \code{\link{tce_municipal_creditor_types}()},
 \code{\link{tce_municipal_expenditures}()},

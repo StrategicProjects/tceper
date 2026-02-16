@@ -121,21 +121,23 @@ names from the API:
 tce_municipalities(clean_names = FALSE)
 ```
 
-## Handling the 10,000-record limit
+## Handling the 100,000-record limit
 
-The API returns at most **10,000 records** per request. When this limit is
+The API returns at most **100,000 records** per request. When this limit is
 reached, `tceper` issues a warning.
 
 To work around this, apply filters to narrow your query:
 
 ```{r limits}
-# Avoid unfiltered requests that may hit 10k limit:
+# Avoid unfiltered requests that may hit the 100k limit:
 # tce_municipal_expenditures()
 
-# Choose a municapality code: 
+# Choose a municipality code:
+library(dplyr)
+library(stringr)
 
-tce_municipalities() %>% 
-  filter(str_detect(municipio, "Pesqueira")) %>% 
+tce_municipalities() |>
+  filter(str_detect(municipio, "Pesqueira")) |>
   glimpse()
 # Rows: 1
 # Columns: 5
@@ -159,4 +161,26 @@ API query names (as shown by `tce_params()`):
 
 ```{r request}
 tce_request("Contratos", CodigoEfiscoUG = "510101", AnoContrato = "2025")
+```
+
+## Cache
+
+All wrapper functions cache results in memory. The default TTL is 1 hour.
+
+```{r cache}
+tce_contracts(codigo_efisco_ug = "510101")  # hits the API
+tce_contracts(codigo_efisco_ug = "510101")  # instant (from cache)
+
+# Bypass cache
+tce_contracts(codigo_efisco_ug = "510101", cache = FALSE)
+
+# Inspect and manage
+tce_cache_info()
+tce_cache_clear()
+```
+
+You can change the TTL globally:
+
+```{r cache-options}
+options(tceper.cache_ttl = 7200)  # 2 hours
 ```

@@ -8,17 +8,23 @@ tce_cache_clear(pattern = NULL)
 }
 \arguments{
 \item{pattern}{Optional regex pattern to clear only matching keys.
-If \code{NULL} (default), clears the entire cache.}
+If \code{NULL} (default), clears the entire cache. For example,
+\code{"Contratos"} clears all cached contract queries.}
 }
 \value{
 Invisibly returns the number of entries cleared.
 }
 \description{
-Removes all cached API responses. Useful when you need fresh data.
+Removes cached API responses so that subsequent calls hit the API again.
+By default clears everything; use \code{pattern} to selectively clear entries
+for specific endpoints.
 }
 \examples{
 \dontrun{
-tce_cache_clear()
-tce_cache_clear("Contratos")
+tce_cache_clear()              # clear everything
+tce_cache_clear("Contratos")   # clear contract queries only
 }
+}
+\seealso{
+\code{\link[=tce_cache_info]{tce_cache_info()}}
 }

@@ -1,20 +1,7 @@
 # ---- Endpoint introspection --------------------------------------------------
-# All documentation strings are in English (per package guidelines)
 
-#' Load the built-in endpoint catalog
-#'
-#' This catalog is used to discover available endpoints, their input parameters,
-#' and output fields.
-#'
-#' @keywords internal
-#' @noRd
-.tce_catalog <- function() {
-  path <- system.file("extdata", "tcepe_dados_abertos_catalogo.json", package = "tceper")
-  if (identical(path, "")) {
-    stop("Catalog file not found inside the package. Please reinstall tceper.", call. = FALSE)
-  }
-  jsonlite::fromJSON(path, simplifyVector = FALSE)
-}
+# NOTE: .tce_catalog() is defined in catalog.R (with in-memory caching).
+# Do NOT redefine it here.
 
 # Internal: return list of method objects, tolerant to different JSON shapes
 .tce_methods <- function(cat) {
@@ -46,9 +33,22 @@
 
 #' Get the catalog entry for a given endpoint
 #'
-#' @param endpoint Endpoint name (e.g., "Municipios", "LicitacaoUG").
-#' @return A list with endpoint metadata, including `entrada` and `saida` when available.
+#' Returns the full metadata for a single endpoint, including its input
+#' parameters (`entrada`) and output fields (`saida`). Useful for
+#' programmatic access to endpoint metadata.
+#'
+#' @param endpoint Endpoint name (e.g., `"Municipios"`, `"LicitacaoUG"`,
+#'   `"Contratos"`). Use [tce_catalog()] to see all available endpoints.
+#' @return A list with endpoint metadata, including `entrada` (input
+#'   parameters) and `saida` (output fields) when available.
+#'
+#' @seealso [tce_catalog()], [tce_params()], [tce_fields()]
 #' @export
+#'
+#' @examples
+#' \dontrun{
+#' tce_endpoint("Contratos")
+#' }
 tce_endpoint <- function(endpoint) {
   cat <- .tce_catalog()
   met <- .tce_methods(cat)
@@ -64,11 +64,26 @@ tce_endpoint <- function(endpoint) {
   met[[idx[[1L]]]]
 }
 
-#' List available endpoints
+#' List available API endpoints
 #'
-#' @param search Optional text to filter by endpoint name/description.
-#' @return A tibble with endpoint names and basic metadata.
+#' Returns a tibble listing all 71 endpoints available in the TCE-PE Open
+#' Data API, with their group, description and URL. Use `search` to filter
+#' by keyword.
+#'
+#' @param search Optional character string to filter endpoints by name or
+#'   description (case-insensitive). For example, `search = "licit"` returns
+#'   all procurement-related endpoints.
+#' @return A tibble with columns `endpoint`, `group`, `title`, and `url`.
+#'
+#' @seealso [tce_params()], [tce_fields()], [tce_endpoint()]
 #' @export
+#'
+#' @examples
+#' \dontrun{
+#' tce_catalog()
+#' tce_catalog(search = "contrat")
+#' tce_catalog(search = "municipio")
+#' }
 tce_catalog <- function(search = NULL) {
   cat <- .tce_catalog()
   met <- .tce_methods(cat)
@@ -88,10 +103,26 @@ tce_catalog <- function(search = NULL) {
 
 #' List input parameters for an endpoint
 #'
-#' @param endpoint Endpoint name (e.g., "Municipios", "LicitacaoUG").
-#' @return A tibble with parameter metadata. Column `api_name` is the exact query
-#'   name expected by the API.
+#' Returns a tibble describing the query parameters accepted by a given
+#' endpoint. The `api_name` column shows the exact name expected by the
+#' API; the `r_name` column shows the `snake_case` equivalent that you
+#' can pass to wrapper functions.
+#'
+#' @param endpoint Endpoint name (e.g., `"Municipios"`, `"Contratos"`).
+#'   Use [tce_catalog()] to see all available endpoints.
+#' @return A tibble with columns `api_name`, `r_name`, `required`, `type`,
+#'   and `description`. Has a custom print method that summarises the
+#'   parameter names at the top.
+#'
+#' @seealso [tce_fields()], [tce_catalog()], [tce_endpoint()]
 #' @export
+#'
+#' @examples
+#' \dontrun{
+#' tce_params("Contratos")
+#' tce_params("Municipios")
+#' tce_params("LicitacaoUG")
+#' }
 tce_params <- function(endpoint) {
   e <- tce_endpoint(endpoint)
   ent <- e$entrada %||% list()
@@ -124,9 +155,23 @@ df
 
 #' List output fields for an endpoint
 #'
-#' @param endpoint Endpoint name (e.g., "Municipios", "LicitacaoUG").
-#' @return A tibble with output field metadata.
+#' Returns a tibble describing the columns returned by a given endpoint.
+#' When `clean_names = TRUE` (the default), column names are converted
+#' from the API's original names to `snake_case`.
+#'
+#' @param endpoint Endpoint name (e.g., `"Municipios"`, `"Contratos"`).
+#'   Use [tce_catalog()] to see all available endpoints.
+#' @return A tibble with columns `name`, `type`, and `description`. Has a
+#'   custom print method that summarises the field names at the top.
+#'
+#' @seealso [tce_params()], [tce_catalog()], [tce_endpoint()]
 #' @export
+#'
+#' @examples
+#' \dontrun{
+#' tce_fields("Contratos")
+#' tce_fields("Municipios")
+#' }
 tce_fields <- function(endpoint) {
   e <- tce_endpoint(endpoint)
   out <- e$saida %||% list()

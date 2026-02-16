@@ -25,19 +25,23 @@ tce_cached <- function(key, expr, use_cache = TRUE) {
 
 #' Clear the tceper in-memory cache
 #'
-#' Removes all cached API responses. Useful when you need fresh data.
+#' Removes cached API responses so that subsequent calls hit the API again.
+#' By default clears everything; use `pattern` to selectively clear entries
+#' for specific endpoints.
 #'
 #' @param pattern Optional regex pattern to clear only matching keys.
-#'   If `NULL` (default), clears the entire cache.
+#'   If `NULL` (default), clears the entire cache. For example,
+#'   `"Contratos"` clears all cached contract queries.
 #'
 #' @return Invisibly returns the number of entries cleared.
 #'
+#' @seealso [tce_cache_info()]
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' tce_cache_clear()
-#' tce_cache_clear("Contratos")
+#' tce_cache_clear()              # clear everything
+#' tce_cache_clear("Contratos")   # clear contract queries only
 #' }
 tce_cache_clear <- function(pattern = NULL) {
   keys <- ls(envir = tce_cache_env)
@@ -53,11 +57,15 @@ tce_cache_clear <- function(pattern = NULL) {
 
 #' Show cache status
 #'
-#' List all currently cached entries and their age.
+#' Returns a tibble describing all currently cached entries, including
+#' the cache key (endpoint + parameters), row count, timestamp and age.
+#' Useful for understanding what is cached and when it will expire.
 #'
 #' @return A [tibble][tibble::tibble-package] with columns `key`, `rows`,
 #'   `cached_at` and `age_secs`, or an empty tibble if the cache is empty.
+#'   The cache TTL is controlled by `getOption("tceper.cache_ttl", 3600)`.
 #'
+#' @seealso [tce_cache_clear()]
 #' @export
 #'
 #' @examples

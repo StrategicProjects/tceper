@@ -4,18 +4,54 @@
 \name{tceper-package}
 \alias{tceper}
 \alias{tceper-package}
-\title{tceper: Access the Open Data 'API' of TCE-PE (Pernambuco Court of Accounts)}
+\title{tceper: Access the Open Data API of TCE-PE}
 \description{
-An R interface to the Open Data 'API' of the Tribunal de Contas do Estado de Pernambuco (TCE-PE), the Court of Accounts of the State of Pernambuco, Brazil. Provides tidy, ready-to-use functions to query public data on revenues, expenditures, commitments, procurement, contracts, agreements, public works, legal processes, personnel and reference tables for all state and municipal government entities in Pernambuco. All results are returned as tibbles with column names converted to 'snake_case' by default. Uses 'httr2' for 'HTTP' requests and 'cli' for user-friendly messages.
+An R interface to the Open Data API of the Tribunal de Contas do Estado
+de Pernambuco (TCE-PE), the Court of Accounts of the State of Pernambuco,
+Brazil. Provides tidy, ready-to-use functions to query public data on
+revenues, expenditures, commitments, procurement, contracts, agreements,
+public works, legal processes, personnel and reference tables for all
+state and municipal government entities in Pernambuco.
 }
-\seealso{
-Useful links:
-\itemize{
-  \item \url{https://github.com/StrategicProjects/tceper}
-  \item \url{https://seu-usuario.github.io/tceper/}
-  \item Report bugs at \url{https://github.com/StrategicProjects/tceper/issues}
+\section{Recommended workflow}{
+
+\enumerate{
+\item \strong{Discover} endpoints with \code{\link[=tce_catalog]{tce_catalog()}} (filter with \verb{search =}).
+\item \strong{Inspect} input parameters with \code{\link[=tce_params]{tce_params()}} and output fields
+with \code{\link[=tce_fields]{tce_fields()}}.
+\item \strong{Query} using a wrapper function (e.g. \code{\link[=tce_contracts]{tce_contracts()}}) or the
+low-level \code{\link[=tce_request]{tce_request()}}.
+}
 }
 
+\section{Parameter names}{
+
+
+All query parameters are passed through \code{...} using the names shown
+by \code{\link[=tce_params]{tce_params()}}. You can use either the original API name (e.g.
+\code{CodigoEfiscoUG}) or its \code{snake_case} equivalent (e.g.
+\code{codigo_efisco_ug}); the package maps them automatically.
+}
+
+\section{Options}{
+
+
+\describe{
+\item{\code{tceper.verbose}}{If \code{TRUE}, all functions print the final API
+URL. Default: \code{FALSE}.}
+\item{\code{tceper.progress}}{If \code{FALSE}, suppresses progress messages.
+Default: \code{TRUE}.}
+\item{\code{tceper.cache_ttl}}{Cache time-to-live in seconds.
+Default: \code{3600} (1 hour).}
+}
+}
+
+\seealso{
+\itemize{
+\item \code{\link[=tce_catalog]{tce_catalog()}}, \code{\link[=tce_params]{tce_params()}}, \code{\link[=tce_fields]{tce_fields()}} — endpoint discovery
+\item \code{\link[=tce_request]{tce_request()}} — low-level query function
+\item \code{\link[=tce_cache_info]{tce_cache_info()}}, \code{\link[=tce_cache_clear]{tce_cache_clear()}} — cache management
+}
 }
 \author{
 \strong{Maintainer}: Andre Leite \email{leite@castlab.org}

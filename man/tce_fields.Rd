@@ -7,11 +7,24 @@
 tce_fields(endpoint)
 }
 \arguments{
-\item{endpoint}{Endpoint name (e.g., "Municipios", "LicitacaoUG").}
+\item{endpoint}{Endpoint name (e.g., \code{"Municipios"}, \code{"Contratos"}).
+Use \code{\link[=tce_catalog]{tce_catalog()}} to see all available endpoints.}
 }
 \value{
-A tibble with output field metadata.
+A tibble with columns \code{name}, \code{type}, and \code{description}. Has a
+custom print method that summarises the field names at the top.
 }
 \description{
-List output fields for an endpoint
+Returns a tibble describing the columns returned by a given endpoint.
+When \code{clean_names = TRUE} (the default), column names are converted
+from the API's original names to \code{snake_case}.
+}
+\examples{
+\dontrun{
+tce_fields("Contratos")
+tce_fields("Municipios")
+}
+}
+\seealso{
+\code{\link[=tce_params]{tce_params()}}, \code{\link[=tce_catalog]{tce_catalog()}}, \code{\link[=tce_endpoint]{tce_endpoint()}}
 }

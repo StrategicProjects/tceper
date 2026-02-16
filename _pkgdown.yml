@@ -37,6 +37,7 @@ reference:
     desc: "Low-level function for querying any API endpoint."
     contents:
       - tce_request
+      - tceper-package
 
   - title: "Endpoint catalog"
     desc: "Discover endpoints and inspect input/output fields from the built-in API catalog."
@@ -45,6 +46,8 @@ reference:
       - tce_endpoint
       - tce_params
       - tce_fields
+      - print.tce_params_tbl
+      - print.tce_fields_tbl
 
   - title: "Revenues"
     desc: "State and municipal revenue data."

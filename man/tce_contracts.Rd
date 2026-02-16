@@ -34,6 +34,9 @@ tce_contracts(codigo_efisco_ug = "510101", verbose = TRUE)
 }
 }
 \seealso{
+\code{\link[=tce_params]{tce_params()}} to discover available parameters,
+\code{\link[=tce_fields]{tce_fields()}} to see output columns.
+
 Other procurement: 
 \code{\link{tce_agreements}()},
 \code{\link{tce_bid_details}()},
