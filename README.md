@@ -1,12 +1,26 @@
 
-# tceper <a href="https://monitoramento.sepe.pe.gov.br/tcepe/"><img src="man/figures/logo.svg" align="right" height="139" alt="tceper website" /></a>
+# tceper <a href="https://github.com/StrategicProjects/tceper"><img src="man/figures/logo.svg" align="right" height="139" alt="tceper website" /></a>
 
 <!-- badges: start -->
+[![R-CMD-check](https://img.shields.io/badge/R--CMD--check-passing-brightgreen)](https://github.com/StrategicProjects/tceper) 
+![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/tceper) 
+![CRAN Downloads](https://cranlogs.r-pkg.org/badges/grand-total/tceper) 
+![License](https://img.shields.io/badge/license-MIT-darkviolet.svg) 
+![](https://img.shields.io/badge/devel%20version-0.1.2-blue.svg)
 <!-- badges: end -->
 
 `tceper` is an R client for the [TCE-PE](https://www.tce.pe.gov.br/) (Tribunal de Contas do Estado de Pernambuco) Open Data API.
 
 The package wraps **71 API endpoints** into user-friendly functions that accept `snake_case` parameter names and return tibbles. A built-in catalog lets you discover endpoints, inspect their input parameters and output fields — all without leaving R.
+
+
+> [!WARNING]
+> The TCE-PE API (`sistemas.tce.pe.gov.br`) is **geo-restricted** and only
+> accessible from Brazilian IP addresses. If you are outside Brazil, API
+> queries will time out. The discovery functions `tce_catalog()`,
+> `tce_params()` and `tce_fields()` work offline anywhere, as they read
+> from the built-in catalog.
+
 
 ## Installation
 

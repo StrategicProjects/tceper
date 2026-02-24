@@ -1,5 +1,5 @@
 Package: tceper
-Title: Access the Open Data 'API' of TCE-PE (Pernambuco Court of Accounts)
+Title: Access the Open Data API of Pernambuco Court of Accounts
 Version: 0.1.2
 Authors@R: c(
     person("Andre", "Leite", email = "leite@castlab.org", role = c("aut", "cre")),
@@ -7,14 +7,14 @@ Authors@R: c(
     person("Hugo", "Vasconcelos", email = "hugo.vasconcelos@ufpe.br", role = "aut"),
     person("Carlos", "Amorin", email = "carlos.agaf@ufpe.br", role = "aut"),
     person("Diogo", "Bezerra", email = "diogo.bezerra@ufpe.br", role = "aut"))
-Description: An R interface to the Open Data 'API' of the Tribunal de Contas do
+Description: An R interface to the Open Data API of the Tribunal de Contas do
     Estado de Pernambuco (TCE-PE), the Court of Accounts of the State of
     Pernambuco, Brazil. Provides tidy, ready-to-use functions to query public
     data on revenues, expenditures, commitments, procurement, contracts,
     agreements, public works, legal processes, personnel and reference tables
     for all state and municipal government entities in Pernambuco. All results
     are returned as tibbles with column names converted to 'snake_case' by
-    default. Uses 'httr2' for 'HTTP' requests and 'cli' for user-friendly
+    default. Uses 'httr2' for HTTP requests and 'cli' for user-friendly
     messages.
 License: MIT + file LICENSE
 URL: https://github.com/StrategicProjects/tceper
