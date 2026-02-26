@@ -22,7 +22,7 @@ tce_catalog(search = "licit")
 ## Inspect one endpoint
 
 Pick an endpoint name from
-[`tce_catalog()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_catalog.md).
+[`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md).
 For instance, `LicitacaoUG`:
 
 ### Input parameters

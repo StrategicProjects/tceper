@@ -11,23 +11,23 @@ Pernambuco.
 ## Recommended workflow
 
 1.  **Discover** endpoints with
-    [`tce_catalog()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_catalog.md)
+    [`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md)
     (filter with `search =`).
 
 2.  **Inspect** input parameters with
-    [`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md)
+    [`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md)
     and output fields with
-    [`tce_fields()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_fields.md).
+    [`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md).
 
 3.  **Query** using a wrapper function (e.g.
-    [`tce_contracts()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_contracts.md))
+    [`tce_contracts()`](https://strategicprojects.github.io/tceper/reference/tce_contracts.md))
     or the low-level
-    [`tce_request()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_request.md).
+    [`tce_request()`](https://strategicprojects.github.io/tceper/reference/tce_request.md).
 
 ## Parameter names
 
 All query parameters are passed through `...` using the names shown by
-[`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md).
+[`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md).
 You can use either the original API name (e.g. `CodigoEfiscoUG`) or its
 `snake_case` equivalent (e.g. `codigo_efisco_ug`); the package maps them
 automatically.
@@ -48,16 +48,16 @@ automatically.
 
 ## See also
 
-- [`tce_catalog()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_catalog.md),
-  [`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md),
-  [`tce_fields()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_fields.md)
+- [`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md),
+  [`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md),
+  [`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md)
   — endpoint discovery
 
-- [`tce_request()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_request.md)
+- [`tce_request()`](https://strategicprojects.github.io/tceper/reference/tce_request.md)
   — low-level query function
 
-- [`tce_cache_info()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_cache_info.md),
-  [`tce_cache_clear()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_cache_clear.md)
+- [`tce_cache_info()`](https://strategicprojects.github.io/tceper/reference/tce_cache_info.md),
+  [`tce_cache_clear()`](https://strategicprojects.github.io/tceper/reference/tce_cache_clear.md)
   — cache management
 
 ## Author

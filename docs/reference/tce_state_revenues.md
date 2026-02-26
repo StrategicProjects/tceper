@@ -38,14 +38,14 @@ A [tibble](https://tibble.tidyverse.org/reference/tibble-package.html).
 
 ## See also
 
-[`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md)
+[`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md)
 to discover available parameters,
-[`tce_fields()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_fields.md)
+[`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md)
 to see output columns.
 
 Other revenues:
-[`tce_budgeted_revenues()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_budgeted_revenues.md),
-[`tce_municipal_revenues()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_municipal_revenues.md)
+[`tce_budgeted_revenues()`](https://strategicprojects.github.io/tceper/reference/tce_budgeted_revenues.md),
+[`tce_municipal_revenues()`](https://strategicprojects.github.io/tceper/reference/tce_municipal_revenues.md)
 
 ## Examples
 

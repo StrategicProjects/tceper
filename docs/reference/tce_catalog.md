@@ -24,9 +24,9 @@ A tibble with columns `endpoint`, `group`, `title`, and `url`.
 
 ## See also
 
-[`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md),
-[`tce_fields()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_fields.md),
-[`tce_endpoint()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_endpoint.md)
+[`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md),
+[`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md),
+[`tce_endpoint()`](https://strategicprojects.github.io/tceper/reference/tce_endpoint.md)
 
 ## Examples
 

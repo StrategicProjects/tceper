@@ -38,16 +38,16 @@ A [tibble](https://tibble.tidyverse.org/reference/tibble-package.html).
 
 ## See also
 
-[`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md)
+[`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md)
 to discover available parameters,
-[`tce_fields()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_fields.md)
+[`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md)
 to see output columns.
 
 Other expenditures:
-[`tce_municipal_creditor_types()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_municipal_creditor_types.md),
-[`tce_municipal_expenditures()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_municipal_expenditures.md),
-[`tce_municipal_transfers()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_municipal_transfers.md),
-[`tce_state_creditor_types()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_state_creditor_types.md)
+[`tce_municipal_creditor_types()`](https://strategicprojects.github.io/tceper/reference/tce_municipal_creditor_types.md),
+[`tce_municipal_expenditures()`](https://strategicprojects.github.io/tceper/reference/tce_municipal_expenditures.md),
+[`tce_municipal_transfers()`](https://strategicprojects.github.io/tceper/reference/tce_municipal_transfers.md),
+[`tce_state_creditor_types()`](https://strategicprojects.github.io/tceper/reference/tce_state_creditor_types.md)
 
 ## Examples
 

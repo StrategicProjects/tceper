@@ -62,7 +62,7 @@ tce_fields("Contratos")
 ### Municipalities
 
 The `Municipios` endpoint is exposed as
-[`tce_municipalities()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_municipalities.md).
+[`tce_municipalities()`](https://strategicprojects.github.io/tceper/reference/tce_municipalities.md).
 
 ``` r
 
@@ -95,7 +95,7 @@ tce_contracts(codigo_efisco_ug = "510101", ano_contrato = "2025")
 ### Suppliers
 
 The `Fornecedores` endpoint is exposed as
-[`tce_suppliers()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_suppliers.md).
+[`tce_suppliers()`](https://strategicprojects.github.io/tceper/reference/tce_suppliers.md).
 
 ``` r
 
@@ -162,9 +162,9 @@ tce_municipal_expenditures(
 ## Direct access to any endpoint
 
 If you prefer to call an endpoint directly, use
-[`tce_request()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_request.md)
+[`tce_request()`](https://strategicprojects.github.io/tceper/reference/tce_request.md)
 and pass the API query names (as shown by
-[`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md)):
+[`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md)):
 
 ``` r
 

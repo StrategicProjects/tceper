@@ -39,5 +39,5 @@ A [tibble](https://tibble.tidyverse.org/reference/tibble-package.html).
 ## See also
 
 Other public_works:
-[`tce_public_works()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_public_works.md),
-[`tce_public_works_audits()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_public_works_audits.md)
+[`tce_public_works()`](https://strategicprojects.github.io/tceper/reference/tce_public_works.md),
+[`tce_public_works_audits()`](https://strategicprojects.github.io/tceper/reference/tce_public_works_audits.md)

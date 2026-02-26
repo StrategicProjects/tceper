@@ -19,7 +19,7 @@ tibble if the cache is empty. The cache TTL is controlled by
 
 ## See also
 
-[`tce_cache_clear()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_cache_clear.md)
+[`tce_cache_clear()`](https://strategicprojects.github.io/tceper/reference/tce_cache_clear.md)
 
 ## Examples
 

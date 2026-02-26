@@ -1,7 +1,7 @@
 # Print method for `tce_fields()` output
 
 Print method for
-[`tce_fields()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_fields.md)
+[`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md)
 output
 
 ## Usage
@@ -16,7 +16,7 @@ print(x, ...)
 - x:
 
   An object returned by
-  [`tce_fields()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_fields.md).
+  [`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md).
 
 - ...:
 

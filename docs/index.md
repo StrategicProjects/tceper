@@ -183,7 +183,7 @@ tce_municipal_expenditures(
 ## Direct access
 
 If you prefer to pass API parameter names directly, use
-[`tce_request()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_request.md):
+[`tce_request()`](https://strategicprojects.github.io/tceper/reference/tce_request.md):
 
 ``` r
 

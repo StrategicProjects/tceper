@@ -1,7 +1,7 @@
 # Print method for `tce_params()` output
 
 Print method for
-[`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md)
+[`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md)
 output
 
 ## Usage
@@ -16,7 +16,7 @@ print(x, ...)
 - x:
 
   An object returned by
-  [`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md).
+  [`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md).
 
 - ...:
 

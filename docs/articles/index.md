@@ -3,8 +3,8 @@
 ### All vignettes
 
 - [API endpoints
-  reference](https://monitoramento.sepe.pe.gov.br/tcepe/articles/endpoints-reference.md):
+  reference](https://strategicprojects.github.io/tceper/articles/endpoints-reference.md):
 - [Exploring endpoints, parameters, and
-  fields](https://monitoramento.sepe.pe.gov.br/tcepe/articles/exploring-endpoints.md):
+  fields](https://strategicprojects.github.io/tceper/articles/exploring-endpoints.md):
 - [Getting started with
-  tceper](https://monitoramento.sepe.pe.gov.br/tcepe/articles/getting-started.md):
+  tceper](https://strategicprojects.github.io/tceper/articles/getting-started.md):

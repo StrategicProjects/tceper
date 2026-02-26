@@ -16,7 +16,7 @@ tce_endpoint(endpoint)
 
   Endpoint name (e.g., `"Municipios"`, `"LicitacaoUG"`, `"Contratos"`).
   Use
-  [`tce_catalog()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_catalog.md)
+  [`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md)
   to see all available endpoints.
 
 ## Value
@@ -26,9 +26,9 @@ and `saida` (output fields) when available.
 
 ## See also
 
-[`tce_catalog()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_catalog.md),
-[`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md),
-[`tce_fields()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_fields.md)
+[`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md),
+[`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md),
+[`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md)
 
 ## Examples
 

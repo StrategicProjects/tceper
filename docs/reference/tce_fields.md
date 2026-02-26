@@ -15,7 +15,7 @@ tce_fields(endpoint)
 - endpoint:
 
   Endpoint name (e.g., `"Municipios"`, `"Contratos"`). Use
-  [`tce_catalog()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_catalog.md)
+  [`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md)
   to see all available endpoints.
 
 ## Value
@@ -25,9 +25,9 @@ print method that summarises the field names at the top.
 
 ## See also
 
-[`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md),
-[`tce_catalog()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_catalog.md),
-[`tce_endpoint()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_endpoint.md)
+[`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md),
+[`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md),
+[`tce_endpoint()`](https://strategicprojects.github.io/tceper/reference/tce_endpoint.md)
 
 ## Examples
 

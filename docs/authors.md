@@ -19,12 +19,12 @@ Source:
 
 Leite A, Wasilew M, Vasconcelos H, Amorin C, Bezerra D (2026). *tceper:
 Access the Open Data API of Pernambuco Court of Accounts*. R package
-version 0.1.2, <https://github.com/StrategicProjects/tceper>.
+version 0.1.2, <https://strategicprojects.github.io/tceper/>.
 
     @Manual{,
       title = {tceper: Access the Open Data API of Pernambuco Court of Accounts},
       author = {Andre Leite and Marcos Wasilew and Hugo Vasconcelos and Carlos Amorin and Diogo Bezerra},
       year = {2026},
       note = {R package version 0.1.2},
-      url = {https://github.com/StrategicProjects/tceper},
+      url = {https://strategicprojects.github.io/tceper/},
     }

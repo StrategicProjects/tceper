@@ -39,11 +39,11 @@ A [tibble](https://tibble.tidyverse.org/reference/tibble-package.html).
 ## See also
 
 Other processes:
-[`tce_consideranda()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_consideranda.md),
-[`tce_debts_fines()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_debts_fines.md),
-[`tce_determinations()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_determinations.md),
-[`tce_outcomes()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_outcomes.md),
-[`tce_processes()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_processes.md),
-[`tce_retirement_outcomes()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_retirement_outcomes.md),
-[`tce_special_accountability()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_special_accountability.md),
-[`tce_spending_limits()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_spending_limits.md)
+[`tce_consideranda()`](https://strategicprojects.github.io/tceper/reference/tce_consideranda.md),
+[`tce_debts_fines()`](https://strategicprojects.github.io/tceper/reference/tce_debts_fines.md),
+[`tce_determinations()`](https://strategicprojects.github.io/tceper/reference/tce_determinations.md),
+[`tce_outcomes()`](https://strategicprojects.github.io/tceper/reference/tce_outcomes.md),
+[`tce_processes()`](https://strategicprojects.github.io/tceper/reference/tce_processes.md),
+[`tce_retirement_outcomes()`](https://strategicprojects.github.io/tceper/reference/tce_retirement_outcomes.md),
+[`tce_special_accountability()`](https://strategicprojects.github.io/tceper/reference/tce_special_accountability.md),
+[`tce_spending_limits()`](https://strategicprojects.github.io/tceper/reference/tce_spending_limits.md)

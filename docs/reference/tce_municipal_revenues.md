@@ -39,8 +39,8 @@ A [tibble](https://tibble.tidyverse.org/reference/tibble-package.html).
 ## See also
 
 Other revenues:
-[`tce_budgeted_revenues()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_budgeted_revenues.md),
-[`tce_state_revenues()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_state_revenues.md)
+[`tce_budgeted_revenues()`](https://strategicprojects.github.io/tceper/reference/tce_budgeted_revenues.md),
+[`tce_state_revenues()`](https://strategicprojects.github.io/tceper/reference/tce_state_revenues.md)
 
 ## Examples
 

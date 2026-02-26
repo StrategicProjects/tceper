@@ -61,30 +61,30 @@
 
   - TTL defaults to 1 hour; configurable via
     `options(tceper.cache_ttl = <seconds>)`.
-  - [`tce_cache_clear()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_cache_clear.md)
+  - [`tce_cache_clear()`](https://strategicprojects.github.io/tceper/reference/tce_cache_clear.md)
     — clear all or pattern-matched cached entries.
-  - [`tce_cache_info()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_cache_info.md)
+  - [`tce_cache_info()`](https://strategicprojects.github.io/tceper/reference/tce_cache_info.md)
     — inspect current cache contents and age.
   - All functions accept `cache = FALSE` to force a fresh request.
 
 - **`verbose` parameter on all functions.** When `TRUE`, prints the
   final API URL (with all query parameters) before making the request.
   Also shows helper commands for
-  [`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md)
+  [`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md)
   and
-  [`tce_fields()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_fields.md).
+  [`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md).
   Can be set globally via `options(tceper.verbose = TRUE)`.
 
 - **Endpoint catalog and introspection.** New functions for discovering
   the API without leaving R:
 
-  - [`tce_catalog()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_catalog.md)
+  - [`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md)
     — list all endpoints with search support.
-  - [`tce_endpoint()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_endpoint.md)
+  - [`tce_endpoint()`](https://strategicprojects.github.io/tceper/reference/tce_endpoint.md)
     — get metadata for a single endpoint.
-  - [`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md)
+  - [`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md)
     — list input parameters with `api_name` and `r_name`.
-  - [`tce_fields()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_fields.md)
+  - [`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md)
     — list output fields.
 
 - **Parameter validation and mapping.** Query parameters are validated

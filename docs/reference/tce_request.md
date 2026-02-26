@@ -4,8 +4,8 @@ Low-level function that sends a GET request to the TCE-PE Open Data API
 and returns the response content as a
 [tibble](https://tibble.tidyverse.org/reference/tibble-package.html).
 Higher-level wrapper functions such as
-[`tce_contracts()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_contracts.md),
-[`tce_state_expenditures()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_state_expenditures.md),
+[`tce_contracts()`](https://strategicprojects.github.io/tceper/reference/tce_contracts.md),
+[`tce_state_expenditures()`](https://strategicprojects.github.io/tceper/reference/tce_state_expenditures.md),
 etc. call this function internally.
 
 You can use `tce_request()` directly to access any API endpoint,

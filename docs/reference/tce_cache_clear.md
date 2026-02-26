@@ -24,7 +24,7 @@ Invisibly returns the number of entries cleared.
 
 ## See also
 
-[`tce_cache_info()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_cache_info.md)
+[`tce_cache_info()`](https://strategicprojects.github.io/tceper/reference/tce_cache_info.md)
 
 ## Examples
 

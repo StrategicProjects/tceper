@@ -39,7 +39,7 @@ A [tibble](https://tibble.tidyverse.org/reference/tibble-package.html).
 ## See also
 
 Other commitments:
-[`tce_commitment_payments()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_commitment_payments.md),
-[`tce_commitment_summary()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_commitment_summary.md),
-[`tce_state_commitment_items()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_state_commitment_items.md),
-[`tce_state_price_comparison()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_state_price_comparison.md)
+[`tce_commitment_payments()`](https://strategicprojects.github.io/tceper/reference/tce_commitment_payments.md),
+[`tce_commitment_summary()`](https://strategicprojects.github.io/tceper/reference/tce_commitment_summary.md),
+[`tce_state_commitment_items()`](https://strategicprojects.github.io/tceper/reference/tce_state_commitment_items.md),
+[`tce_state_price_comparison()`](https://strategicprojects.github.io/tceper/reference/tce_state_price_comparison.md)

@@ -39,5 +39,5 @@ A [tibble](https://tibble.tidyverse.org/reference/tibble-package.html).
 ## See also
 
 Other suppliers:
-[`tce_sanctions()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_sanctions.md),
-[`tce_suppliers()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_suppliers.md)
+[`tce_sanctions()`](https://strategicprojects.github.io/tceper/reference/tce_sanctions.md),
+[`tce_suppliers()`](https://strategicprojects.github.io/tceper/reference/tce_suppliers.md)
