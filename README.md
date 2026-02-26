@@ -24,7 +24,7 @@ from the built-in catalog.
 </td></tr></table>
 
 <table class="important-banner"><tr><td>
-❕️ <strong class="important-title">Warning</strong><br>
+❕️ <strong class="important-title">Important</strong><br>
 This package acts as a wrapper for a Brazilian public API provided by the 
 Tribunal de Contas do Estado de Pernambuco (TCE-PE), which is the institution 
 responsible for the data. To maintain consistency with R package development 
@@ -35,17 +35,6 @@ function `tce_state_revenues()`⁠, but you need to pass the parameters in
 Portuguese, such as `AnoReferencia = 2025`⁠. You can find the original list of
 endpoints and their respective parameters in the [official API documentation](https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!listar).
 </td></tr></table>
-
-> [!IMPORTANT]
-> This package acts as a wrapper for a Brazilian public API provided by the 
-> Tribunal de Contas do Estado de Pernambuco (TCE-PE), which is the institution 
-> responsible for the data. To maintain consistency with R package development 
-> standards, all wrapper functions are named in English. However, because the 
-> source API is natively in Portuguese, you will interact with Portuguese terms 
-> when passing arguments or parsing the responses. For example: you may use the 
-> function `tce_state_revenues()`⁠, but you need to pass the parameters in
-> Portuguese, such as `AnoReferencia = 2025`⁠. You can find the original list of
-> endpoints and their respective parameters in the [official API documentation](https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!listar).
 
 ## Installation
 
