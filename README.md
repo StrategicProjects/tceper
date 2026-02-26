@@ -13,13 +13,6 @@
 
 The package wraps **71 API endpoints** into user-friendly functions that accept `snake_case` parameter names and return tibbles. A built-in catalog lets you discover endpoints, inspect their input parameters and output fields — all without leaving R.
 
-> [!WARNING]
-> The TCE-PE API (`sistemas.tce.pe.gov.br`) is **geo-restricted** and only
-> accessible from Brazilian IP addresses. If you are outside Brazil, API
-> queries will time out. The discovery functions `tce_catalog()`,
-> `tce_params()` and `tce_fields()` work offline anywhere, as they read
-> from the built-in catalog.
-
 
 <table class="warning-banner"><tr><td>
 ⚠️ <strong class="warning-title">Warning</strong><br>
@@ -31,7 +24,7 @@ from the built-in catalog.
 </td></tr></table>
 
 <table class="important-banner"><tr><td>
-<strong class="important-title" dir="auto"><svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</strong>
+❕️ <strong class="important-title">Warning</strong><br>
 This package acts as a wrapper for a Brazilian public API provided by the 
 Tribunal de Contas do Estado de Pernambuco (TCE-PE), which is the institution 
 responsible for the data. To maintain consistency with R package development 
