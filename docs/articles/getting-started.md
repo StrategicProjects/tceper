@@ -1,0 +1,197 @@
+# Getting started with tceper
+
+## Overview
+
+**tceper** is an R client for the TCE-PE (Tribunal de Contas do Estado
+de Pernambuco) Open Data API.
+
+The package wraps the official endpoints into user-friendly functions
+that:
+
+- accept `snake_case` arguments (mapped to the API’s expected query
+  names), and
+- return tibbles (with optional `snake_case` output column names).
+
+## Installation
+
+``` r
+
+# install.packages("remotes")
+remotes::install_github("StrategicProjects/tceper")
+```
+
+## Load the package
+
+``` r
+
+library(tceper)
+```
+
+## Explore endpoints before querying
+
+### List endpoints
+
+``` r
+
+tce_catalog()
+```
+
+Filter by keyword:
+
+``` r
+
+tce_catalog(search = "contrat")
+```
+
+### Inspect input parameters
+
+``` r
+
+tce_params("Contratos")
+```
+
+### Inspect output fields
+
+``` r
+
+tce_fields("Contratos")
+```
+
+## Quick queries
+
+### Municipalities
+
+The `Municipios` endpoint is exposed as
+[`tce_municipalities()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_municipalities.md).
+
+``` r
+
+tce_municipalities()
+```
+
+You can filter by state (UF) or by municipality name:
+
+``` r
+
+tce_municipalities(unidadefederativa = "PE")
+tce_municipalities(municipio = "Recife")
+```
+
+### Contracts
+
+``` r
+
+tce_contracts(codigo_efisco_ug = "510101")
+```
+
+You can add additional filters. Use `tce_params("Contratos")` to see
+what is allowed.
+
+``` r
+
+tce_contracts(codigo_efisco_ug = "510101", ano_contrato = "2025")
+```
+
+### Suppliers
+
+The `Fornecedores` endpoint is exposed as
+[`tce_suppliers()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_suppliers.md).
+
+``` r
+
+tce_suppliers(cpfcnpj = "25173110000186")
+tce_suppliers(nome = "eireli")
+```
+
+## Verbose mode (recommended while exploring)
+
+When `verbose = TRUE`, the package prints:
+
+- the final API URL, and
+- helper commands to inspect inputs/outputs for the endpoint.
+
+``` r
+
+tce_bids(anomodalidade = "2025", verbose = TRUE)
+```
+
+## Keeping original output field names
+
+By default, output columns are converted to `snake_case`. To keep the
+original names from the API:
+
+``` r
+
+tce_municipalities(clean_names = FALSE)
+```
+
+## Handling the 100,000-record limit
+
+The API returns at most **100,000 records** per request. When this limit
+is reached, `tceper` issues a warning.
+
+To work around this, apply filters to narrow your query:
+
+``` r
+
+# Avoid unfiltered requests that may hit the 100k limit:
+# tce_municipal_expenditures()
+
+# Choose a municipality code:
+library(dplyr)
+library(stringr)
+
+tce_municipalities() |>
+  filter(str_detect(municipio, "Pesqueira")) |>
+  glimpse()
+# Rows: 1
+# Columns: 5
+# $ codigoibge        <chr> "2610905"
+# $ codigo            <chr> "P113"
+# $ unidadefederativa <chr> "PE"
+# $ municipio         <chr> "Pesqueira"
+# $ codigosagres      <chr> "5408"
+
+# Filter by municipality and year:
+tce_municipal_expenditures(
+  codigo_municipio = "P113", # Pesqueira
+  ano_referencia   = "2025"
+)
+```
+
+## Direct access to any endpoint
+
+If you prefer to call an endpoint directly, use
+[`tce_request()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_request.md)
+and pass the API query names (as shown by
+[`tce_params()`](https://monitoramento.sepe.pe.gov.br/tcepe/reference/tce_params.md)):
+
+``` r
+
+tce_request("Contratos", CodigoEfiscoUG = "510101", AnoContrato = "2025")
+```
+
+## Cache
+
+All wrapper functions cache results in memory. The default TTL is 1
+hour.
+
+``` r
+
+tce_contracts(codigo_efisco_ug = "510101")  # hits the API
+tce_contracts(codigo_efisco_ug = "510101")  # instant (from cache)
+
+# Bypass cache
+tce_contracts(codigo_efisco_ug = "510101", cache = FALSE)
+
+# Inspect and manage
+tce_cache_info()
+tce_cache_clear()
+```
+
+You can change the TTL globally:
+
+``` r
+
+options(tceper.cache_ttl = 7200)  # 2 hours
+```
