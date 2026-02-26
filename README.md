@@ -15,7 +15,7 @@ The package wraps **71 API endpoints** into user-friendly functions that accept 
 
 
 <table class="warning-banner"><tr><td>
-⚠️ <strong class="warning-title">Warning</strong><br>
+&#x26A0;&#xFE0F; <strong class="warning-title">Warning</strong><br>
 The TCE-PE API (<code>sistemas.tce.pe.gov.br</code>) is <strong>geo-restricted</strong> and only
 accessible from Brazilian IP addresses. If you are outside Brazil, API
 queries will time out. The discovery functions <code>tce_catalog()</code>,
@@ -24,7 +24,7 @@ from the built-in catalog.
 </td></tr></table>
 
 <table class="important-banner"><tr><td>
-❕️ <strong class="important-title">Important</strong><br>
+&#x2755;️ <strong class="important-title">Disclaimer</strong><br>
 This package acts as a wrapper for a Brazilian public API provided by the 
 Tribunal de Contas do Estado de Pernambuco (TCE-PE), which is the institution 
 responsible for the data. To maintain consistency with R package development 
