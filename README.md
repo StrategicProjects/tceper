@@ -14,13 +14,37 @@
 The package wraps **71 API endpoints** into user-friendly functions that accept `snake_case` parameter names and return tibbles. A built-in catalog lets you discover endpoints, inspect their input parameters and output fields — all without leaving R.
 
 
-> [!WARNING]
-> The TCE-PE API (`sistemas.tce.pe.gov.br`) is **geo-restricted** and only
-> accessible from Brazilian IP addresses. If you are outside Brazil, API
-> queries will time out. The discovery functions `tce_catalog()`,
-> `tce_params()` and `tce_fields()` work offline anywhere, as they read
-> from the built-in catalog.
+<table class="warning-banner"><tr><td>
+⚠️ <strong class="warning-title">Warning</strong><br>
+The TCE-PE API (<code>sistemas.tce.pe.gov.br</code>) is <strong>geo-restricted</strong> and only
+accessible from Brazilian IP addresses. If you are outside Brazil, API
+queries will time out. The discovery functions <code>tce_catalog()</code>,
+<code>tce_params()</code> and <code>tce_fields()</code> work offline anywhere, as they read
+from the built-in catalog.
+</td></tr></table>
 
+<table class="important-banner"><tr><td>
+❕️ <strong class="important-title">Warning</strong><br>
+This package acts as a wrapper for a Brazilian public API provided by the 
+Tribunal de Contas do Estado de Pernambuco (TCE-PE), which is the institution 
+responsible for the data. To maintain consistency with R package development 
+standards, all wrapper functions are named in English. However, because the 
+source API is natively in Portuguese, you will interact with Portuguese terms 
+when passing arguments or parsing the responses. For example: you may use the 
+function `tce_state_revenues()`⁠, but you need to pass the parameters in
+Portuguese, such as `AnoReferencia = 2025`⁠. You can find the original list of
+endpoints and their respective parameters in the [official API documentation](https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!listar).
+</td></tr></table>
+> [!IMPORTANT]
+> This package acts as a wrapper for a Brazilian public API provided by the 
+> Tribunal de Contas do Estado de Pernambuco (TCE-PE), which is the institution 
+> responsible for the data. To maintain consistency with R package development 
+> standards, all wrapper functions are named in English. However, because the 
+> source API is natively in Portuguese, you will interact with Portuguese terms 
+> when passing arguments or parsing the responses. For example: you may use the 
+> function `tce_state_revenues()`⁠, but you need to pass the parameters in
+> Portuguese, such as `AnoReferencia = 2025`⁠. You can find the original list of
+> endpoints and their respective parameters in the [official API documentation](https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!listar).
 
 ## Installation
 
