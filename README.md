@@ -35,6 +35,7 @@ function `tce_state_revenues()`⁠, but you need to pass the parameters in
 Portuguese, such as `AnoReferencia = 2025`⁠. You can find the original list of
 endpoints and their respective parameters in the [official API documentation](https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!listar).
 </td></tr></table>
+
 > [!IMPORTANT]
 > This package acts as a wrapper for a Brazilian public API provided by the 
 > Tribunal de Contas do Estado de Pernambuco (TCE-PE), which is the institution 
