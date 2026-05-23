@@ -12,10 +12,17 @@ tce_cached <- function(key, expr, use_cache = TRUE) {
   ttl <- getOption("tceper.cache_ttl", 3600)
 
   if (exists(key, envir = tce_cache_env, inherits = FALSE)) {
-    cli::cli_alert_success("Data retrieved from cache.")
     entry <- get(key, envir = tce_cache_env, inherits = FALSE)
     age <- as.numeric(difftime(Sys.time(), entry$time, units = "secs"))
-    if (age < ttl) return(entry$value)
+    if (age < ttl) {
+      if (getOption("tceper.progress", TRUE)) {
+        nrows <- if (tibble::is_tibble(entry$value)) nrow(entry$value) else NA_integer_
+        cli::cli_alert_success(
+          "Cache hit ({.val {round(age)}}s old{if (!is.na(nrows)) sprintf(', %s row%s', nrows, if (nrows == 1L) '' else 's') else ''})."
+        )
+      }
+      return(entry$value)
+    }
   }
 
   result <- expr

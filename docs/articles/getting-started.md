@@ -1,5 +1,16 @@
 # Getting started with tceper
 
+> **Note** — Code chunks in this vignette are shown but not executed at
+> build time (`eval = FALSE`). The TCE-PE API host
+> (`sistemas.tcepe.tc.br`) only accepts connections from Brazilian IP
+> addresses, so requests would fail on CRAN check machines and on most
+> CI runners outside Brazil. Run the snippets interactively from a
+> Brazilian network to reproduce the outputs. The discovery functions
+> ([`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md),
+> [`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md),
+> [`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md))
+> work offline anywhere.
+
 ## Overview
 
 **tceper** is an R client for the TCE-PE (Tribunal de Contas do Estado
@@ -69,12 +80,15 @@ The `Municipios` endpoint is exposed as
 tce_municipalities()
 ```
 
-You can filter by state (UF) or by municipality name:
+You can filter by state (UF) or by municipality name. Accented
+Portuguese characters work as-is – the package transcodes UTF-8 input to
+the Latin-1 encoding the API expects:
 
 ``` r
 
 tce_municipalities(unidadefederativa = "PE")
 tce_municipalities(municipio = "Recife")
+tce_municipalities(municipio = "São José da Coroa Grande")
 ```
 
 ### Contracts

@@ -29,10 +29,10 @@ A \link[tibble:tibble-package]{tibble}.
 Retrieve municipal-level expenditure data.
 }
 \seealso{
-Other expenditures: 
-\code{\link{tce_municipal_creditor_types}()},
-\code{\link{tce_municipal_transfers}()},
-\code{\link{tce_state_creditor_types}()},
-\code{\link{tce_state_expenditures}()}
+Other expenditures:
+\code{\link[=tce_municipal_creditor_types]{tce_municipal_creditor_types()}},
+\code{\link[=tce_municipal_transfers]{tce_municipal_transfers()}},
+\code{\link[=tce_state_creditor_types]{tce_state_creditor_types()}},
+\code{\link[=tce_state_expenditures]{tce_state_expenditures()}}
 }
 \concept{expenditures}

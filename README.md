@@ -6,7 +6,7 @@
 ![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/tceper) 
 ![CRAN Downloads](https://cranlogs.r-pkg.org/badges/grand-total/tceper) 
 ![License](https://img.shields.io/badge/license-MIT-darkviolet.svg) 
-![](https://img.shields.io/badge/devel%20version-0.1.2-blue.svg)
+![](https://img.shields.io/badge/devel%20version-0.1.3-blue.svg)
 <!-- badges: end -->
 
 `tceper` is an R client for the [TCE-PE](https://www.tce.pe.gov.br/) (Tribunal de Contas do Estado de Pernambuco) Open Data API.
@@ -16,7 +16,7 @@ The package wraps **71 API endpoints** into user-friendly functions that accept 
 
 <table class="warning-banner"><tr><td>
 &#x26A0;&#xFE0F; <strong class="warning-title">Warning</strong><br>
-The TCE-PE API (<code>sistemas.tce.pe.gov.br</code>) is <strong>geo-restricted</strong> and only
+The TCE-PE API (<code>sistemas.tcepe.tc.br</code>) is <strong>geo-restricted</strong> and only
 accessible from Brazilian IP addresses. If you are outside Brazil, API
 queries will time out. The discovery functions <code>tce_catalog()</code>,
 <code>tce_params()</code> and <code>tce_fields()</code> work offline anywhere, as they read
@@ -33,7 +33,7 @@ source API is natively in Portuguese, you will interact with Portuguese terms
 when passing arguments or parsing the responses. For example: you may use the 
 function `tce_state_revenues()`⁠, but you need to pass the parameters in
 Portuguese, such as `AnoReferencia = 2025`⁠. You can find the original list of
-endpoints and their respective parameters in the [official API documentation](https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!listar).
+endpoints and their respective parameters in the [official API documentation](https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!listar).
 </td></tr></table>
 
 ## Installation
@@ -117,7 +117,7 @@ When `verbose = TRUE`, the package prints the final API URL and helper commands 
 
 ```r
 tce_contracts(codigo_efisco_ug = "510101", verbose = TRUE)
-#> ℹ API URL: https://sistemas.tce.pe.gov.br/DadosAbertos/Contratos!json?CodigoEfiscoUG=510101
+#> ℹ API URL: https://sistemas.tcepe.tc.br/DadosAbertos/Contratos!json?CodigoEfiscoUG=510101
 #> ℹ To inspect this endpoint:
 #>     - Input parameters: tce_params("Contratos")
 #>     - Output fields: tce_fields("Contratos")

@@ -28,8 +28,8 @@ A \link[tibble:tibble-package]{tibble}.
 Retrieve sanctions applied to suppliers.
 }
 \seealso{
-Other suppliers: 
-\code{\link{tce_person_creditor_types}()},
-\code{\link{tce_suppliers}()}
+Other suppliers:
+\code{\link[=tce_person_creditor_types]{tce_person_creditor_types()}},
+\code{\link[=tce_suppliers]{tce_suppliers()}}
 }
 \concept{suppliers}

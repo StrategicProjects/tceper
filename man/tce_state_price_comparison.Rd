@@ -29,10 +29,10 @@ A \link[tibble:tibble-package]{tibble}.
 Retrieve state commitment items with values for price comparison.
 }
 \seealso{
-Other commitments: 
-\code{\link{tce_commitment_liquidations}()},
-\code{\link{tce_commitment_payments}()},
-\code{\link{tce_commitment_summary}()},
-\code{\link{tce_state_commitment_items}()}
+Other commitments:
+\code{\link[=tce_commitment_liquidations]{tce_commitment_liquidations()}},
+\code{\link[=tce_commitment_payments]{tce_commitment_payments()}},
+\code{\link[=tce_commitment_summary]{tce_commitment_summary()}},
+\code{\link[=tce_state_commitment_items]{tce_state_commitment_items()}}
 }
 \concept{commitments}

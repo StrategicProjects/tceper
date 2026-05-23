@@ -34,8 +34,8 @@ tce_municipal_revenues(id_unidade_gestora = "384")
 }
 }
 \seealso{
-Other revenues: 
-\code{\link{tce_budgeted_revenues}()},
-\code{\link{tce_state_revenues}()}
+Other revenues:
+\code{\link[=tce_budgeted_revenues]{tce_budgeted_revenues()}},
+\code{\link[=tce_state_revenues]{tce_state_revenues()}}
 }
 \concept{revenues}

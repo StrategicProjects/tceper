@@ -37,20 +37,20 @@ tce_contracts(codigo_efisco_ug = "510101", verbose = TRUE)
 \code{\link[=tce_params]{tce_params()}} to discover available parameters,
 \code{\link[=tce_fields]{tce_fields()}} to see output columns.
 
-Other procurement: 
-\code{\link{tce_agreements}()},
-\code{\link{tce_bid_details}()},
-\code{\link{tce_bid_documents}()},
-\code{\link{tce_bid_legal_basis}()},
-\code{\link{tce_bid_modalities}()},
-\code{\link{tce_bid_stages}()},
-\code{\link{tce_bid_statuses}()},
-\code{\link{tce_bids}()},
-\code{\link{tce_contract_amendments}()},
-\code{\link{tce_contract_documents}()},
-\code{\link{tce_contract_items}()},
-\code{\link{tce_object_characteristics}()},
-\code{\link{tce_object_classifications}()},
-\code{\link{tce_object_nature}()}
+Other procurement:
+\code{\link[=tce_agreements]{tce_agreements()}},
+\code{\link[=tce_bid_details]{tce_bid_details()}},
+\code{\link[=tce_bid_documents]{tce_bid_documents()}},
+\code{\link[=tce_bid_legal_basis]{tce_bid_legal_basis()}},
+\code{\link[=tce_bid_modalities]{tce_bid_modalities()}},
+\code{\link[=tce_bid_stages]{tce_bid_stages()}},
+\code{\link[=tce_bid_statuses]{tce_bid_statuses()}},
+\code{\link[=tce_bids]{tce_bids()}},
+\code{\link[=tce_contract_amendments]{tce_contract_amendments()}},
+\code{\link[=tce_contract_documents]{tce_contract_documents()}},
+\code{\link[=tce_contract_items]{tce_contract_items()}},
+\code{\link[=tce_object_characteristics]{tce_object_characteristics()}},
+\code{\link[=tce_object_classifications]{tce_object_classifications()}},
+\code{\link[=tce_object_nature]{tce_object_nature()}}
 }
 \concept{procurement}

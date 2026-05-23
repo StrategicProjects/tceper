@@ -37,8 +37,8 @@ tce_state_revenues(id_unidade_gestora = "510101")
 \code{\link[=tce_params]{tce_params()}} to discover available parameters,
 \code{\link[=tce_fields]{tce_fields()}} to see output columns.
 
-Other revenues: 
-\code{\link{tce_budgeted_revenues}()},
-\code{\link{tce_municipal_revenues}()}
+Other revenues:
+\code{\link[=tce_budgeted_revenues]{tce_budgeted_revenues()}},
+\code{\link[=tce_municipal_revenues]{tce_municipal_revenues()}}
 }
 \concept{revenues}

@@ -29,14 +29,14 @@ Retrieve all managed entities (\emph{unidades jurisdicionadas}), state
 and municipal.
 }
 \seealso{
-Other reference: 
-\code{\link{tce_creditor_types}()},
-\code{\link{tce_funding_sources}()},
-\code{\link{tce_inactivation_reasons}()},
-\code{\link{tce_municipal_entities}()},
-\code{\link{tce_municipalities}()},
-\code{\link{tce_payroll_types}()},
-\code{\link{tce_state_entities}()},
-\code{\link{tce_sub_units}()}
+Other reference:
+\code{\link[=tce_creditor_types]{tce_creditor_types()}},
+\code{\link[=tce_funding_sources]{tce_funding_sources()}},
+\code{\link[=tce_inactivation_reasons]{tce_inactivation_reasons()}},
+\code{\link[=tce_municipal_entities]{tce_municipal_entities()}},
+\code{\link[=tce_municipalities]{tce_municipalities()}},
+\code{\link[=tce_payroll_types]{tce_payroll_types()}},
+\code{\link[=tce_state_entities]{tce_state_entities()}},
+\code{\link[=tce_sub_units]{tce_sub_units()}}
 }
 \concept{reference}

@@ -16,12 +16,12 @@ tce_request(
 \arguments{
 \item{endpoint}{A character string with the API method name (e.g.,
 \code{"Contratos"}, \code{"DespesasEstaduais"}). See
-\url{https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!listar} for the
+\url{https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!listar} for the
 full list of available endpoints.}
 
-\item{...}{Named query parameters passed to the API \strong{exactly as the
-API expects them} (typically \code{CamelCase}). \code{NULL} values are silently
-dropped. See the API documentation for parameter names.}
+\item{...}{Named query parameters. You can use either the API names
+(\code{CamelCase}/\code{UPPERCASE}) or the snake_case aliases shown by
+\code{\link[=tce_params]{tce_params()}}. \code{NULL} values are silently dropped.}
 
 \item{clean_names}{If \code{TRUE} (default), column names are converted to
 \code{snake_case} via \code{\link[janitor:clean_names]{janitor::clean_names()}}. Set to \code{FALSE} to keep the
@@ -30,12 +30,12 @@ original column names returned by the API.}
 \item{max_tries}{Maximum number of retry attempts for failed requests
 (default: \code{3}). Passed to \code{\link[httr2:req_retry]{httr2::req_retry()}}.}
 
-\item{progress}{If \code{TRUE}, displays progress messages via \link[cli:cli]{cli::cli}. Defaults
+\item{progress}{If \code{TRUE}, displays progress messages via \link[cli:cli]{cli}. Defaults
 to the value of \code{getOption("tceper.progress")}, or \code{TRUE} if unset.}
 
-\item{verbose}{If \code{TRUE}, prints the final API URL to the console before
-performing the request. Useful for debugging and testing. Defaults to
-\code{getOption("tceper.verbose", FALSE)}.}
+\item{verbose}{If \code{TRUE}, prints the final API URL, parameters, and
+response metadata (status, content-type, size, elapsed time). Defaults
+to \code{getOption("tceper.verbose", FALSE)}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble} with the response content.
@@ -53,14 +53,23 @@ including those that do not yet have a dedicated wrapper.
 \details{
 \subsection{API base URL}{
 
-\verb{https://sistemas.tce.pe.gov.br/DadosAbertos/}
+\verb{https://sistemas.tcepe.tc.br/DadosAbertos/}
+}
+
+\subsection{Network access}{
+
+The API host only accepts connections from \strong{Brazilian IP addresses}.
+Calls from outside Brazil are dropped at the network level and surface
+as a connection or TLS error. The offline discovery functions
+(\code{\link[=tce_catalog]{tce_catalog()}}, \code{\link[=tce_params]{tce_params()}}, \code{\link[=tce_fields]{tce_fields()}}) do not require
+network access and work anywhere.
 }
 
 \subsection{URL construction}{
 
 The TCE-PE API uses Struts2-style URLs where \code{!} invokes a method
 (e.g. \verb{Contratos!json}). The URL is built with \code{paste0()} to preserve
-the literal \code{!} — using \code{httr2::req_url_path_append()} would encode it
+the literal \code{!} -- using \code{httr2::req_url_path_append()} would encode it
 as \verb{\%21}, causing the server to ignore all query parameters.
 }
 
@@ -72,15 +81,25 @@ is reached, a warning is issued suggesting the use of additional filters.
 
 \subsection{Encoding}{
 
-The API responds in ISO-8859-1 encoding, which is converted to UTF-8
-internally.
+The TCE-PE backend runs on \strong{ISO-8859-1} (Latin-1), not UTF-8. The
+package handles this transparently in both directions:
+\itemize{
+\item \strong{Response body} is decoded as Latin-1 and returned as UTF-8 R
+strings, so accented Portuguese characters come through cleanly
+(\code{São}, \code{Município}, \code{Conceição}, etc.).
+\item \strong{Query parameters} are transcoded UTF-8 -> Latin-1 before
+percent-encoding, so filtering by accented values works as
+expected (e.g. \code{tce_municipalities(municipio = "São José da Coroa Grande")}).
+You can pass any R string with accents -- the conversion is
+automatic.
+}
 }
 
 \subsection{Options}{
 \itemize{
-\item \code{tceper.progress} — set to \code{FALSE} to suppress all progress messages.
-\item \code{tceper.verbose} — set to \code{TRUE} to always print the final API URL.
-\item \code{tceper.cache_ttl} — cache time-to-live in seconds (default: \code{3600}).
+\item \code{tceper.progress} -- set to \code{FALSE} to suppress all progress messages.
+\item \code{tceper.verbose} -- set to \code{TRUE} to always print request/response details.
+\item \code{tceper.cache_ttl} -- cache time-to-live in seconds (default: \code{3600}).
 }
 }
 }
@@ -89,7 +108,7 @@ internally.
 # Direct query to any endpoint
 tce_request("Contratos", CodigoEfiscoUG = "510101")
 
-# Show the final URL for debugging
+# Show full request/response details
 tce_request("Contratos", CodigoEfiscoUG = "510101", verbose = TRUE)
 
 # Keep original column names

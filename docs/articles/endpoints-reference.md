@@ -4,7 +4,10 @@ This vignette provides a *generated* mapping between exported `tceper`
 functions and their underlying TCE-PE API endpoints, based on the
 package code and the built-in catalog.
 
-The table below is generated locally (no API calls).
+The table below is generated locally **from the built-in catalog** — no
+API call is made, so it builds anywhere regardless of network access.
+The example block at the end of the vignette is shown but not executed
+(the API is only reachable from Brazilian IP addresses).
 
 ``` r
 

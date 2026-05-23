@@ -28,8 +28,8 @@ A \link[tibble:tibble-package]{tibble}.
 Lookup table of person creditor types.
 }
 \seealso{
-Other suppliers: 
-\code{\link{tce_sanctions}()},
-\code{\link{tce_suppliers}()}
+Other suppliers:
+\code{\link[=tce_sanctions]{tce_sanctions()}},
+\code{\link[=tce_suppliers]{tce_suppliers()}}
 }
 \concept{suppliers}

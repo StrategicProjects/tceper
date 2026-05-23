@@ -1,3 +1,61 @@
+# tceper 0.1.3
+
+## Breaking changes
+
+* **Migrated to the new API host** `sistemas.tcepe.tc.br`. The previous
+  host `sistemas.tce.pe.gov.br` has been retired by TCE-PE and now
+  returns empty responses. All built-in endpoints and the catalog have
+  been updated.
+
+## New features
+
+* **Latin-1 query encoding.** The TCE-PE backend matches values as
+  ISO-8859-1 bytes, so accented Portuguese inputs previously returned
+  zero rows. `tce_request()` now transcodes UTF-8 inputs to Latin-1 and
+  percent-encodes byte-by-byte. `tce_municipalities(municipio = "São
+  José da Coroa Grande")` now matches as expected.
+
+* **Verbose mode rewritten.** `verbose = TRUE` now prints a structured
+  block with the endpoint, full URL, parameters list (long values
+  truncated), and after the response: HTTP status, content-type, body
+  size, and elapsed time.
+
+* **Cache hit log.** Cached results now report age and row count
+  (`Cache hit (12s old, 1334 rows).`) when `tceper.progress` is on.
+
+## Improvements
+
+* **Friendlier errors.** HTTP, JSON-parse, API-status, DNS, TLS, and
+  timeout failures now produce structured `cli::cli_abort()` messages
+  with the URL, response body excerpt (where applicable), and an
+  actionable next-step hint. The API's `mensagem` field is surfaced
+  when present.
+
+* **Empty results explain themselves.** When `tamanhoResultado` is 0
+  the warning suggests relaxing or removing filters.
+
+* **100k record limit warning** now spells out that rows are likely
+  missing and suggests common narrowing filters.
+
+## Documentation
+
+* New `## Network access` and rewritten `## Encoding` sections in
+  `?tce_request` cover geo-restriction (Brazilian IPs only) and the
+  Latin-1 round-trip.
+
+* Vignettes carry a callout noting that requests require a Brazilian
+  IP, and use `purl = FALSE` so `R CMD check` does not try to extract
+  and run API-bound chunks.
+
+* `cran-comments.md` documents both the geo-restriction (CRAN policy
+  1.1) and the encoding handling for the CRAN reviewer.
+
+* `inst/WORDLIST` added for `spelling::spell_check_package()`.
+
+* `_pkgdown.yml` URL corrected (placeholder `BigDataPE` ->
+  `tceper`); site rebuilt with the new content.
+
+
 # tceper 0.1.2
 
 ## Bug fixes

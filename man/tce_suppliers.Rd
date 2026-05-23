@@ -28,8 +28,8 @@ A \link[tibble:tibble-package]{tibble}.
 Retrieve registered suppliers. Partial matching is supported.
 }
 \seealso{
-Other suppliers: 
-\code{\link{tce_person_creditor_types}()},
-\code{\link{tce_sanctions}()}
+Other suppliers:
+\code{\link[=tce_person_creditor_types]{tce_person_creditor_types()}},
+\code{\link[=tce_sanctions]{tce_sanctions()}}
 }
 \concept{suppliers}

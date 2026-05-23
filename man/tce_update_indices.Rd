@@ -27,22 +27,22 @@ A \link[tibble:tibble-package]{tibble}.
 Indices for updating prices in cost-estimate spreadsheets.
 }
 \seealso{
-Other remessa: 
-\code{\link{tce_benefit_types}()},
-\code{\link{tce_budget_statuses}()},
-\code{\link{tce_legal_instrument_documents}()},
-\code{\link{tce_legal_instrument_items}()},
-\code{\link{tce_legal_instrument_participants}()},
-\code{\link{tce_legal_instruments}()},
-\code{\link{tce_procurement_process_budget}()},
-\code{\link{tce_procurement_process_documents}()},
-\code{\link{tce_procurement_process_participants}()},
-\code{\link{tce_procurement_processes}()},
-\code{\link{tce_reference_codes}()},
-\code{\link{tce_reference_dates}()},
-\code{\link{tce_reference_sources}()},
-\code{\link{tce_remessa_works}()},
-\code{\link{tce_remessa_works_execution}()},
-\code{\link{tce_remessa_works_geometry}()}
+Other remessa:
+\code{\link[=tce_benefit_types]{tce_benefit_types()}},
+\code{\link[=tce_budget_statuses]{tce_budget_statuses()}},
+\code{\link[=tce_legal_instrument_documents]{tce_legal_instrument_documents()}},
+\code{\link[=tce_legal_instrument_items]{tce_legal_instrument_items()}},
+\code{\link[=tce_legal_instrument_participants]{tce_legal_instrument_participants()}},
+\code{\link[=tce_legal_instruments]{tce_legal_instruments()}},
+\code{\link[=tce_procurement_process_budget]{tce_procurement_process_budget()}},
+\code{\link[=tce_procurement_process_documents]{tce_procurement_process_documents()}},
+\code{\link[=tce_procurement_process_participants]{tce_procurement_process_participants()}},
+\code{\link[=tce_procurement_processes]{tce_procurement_processes()}},
+\code{\link[=tce_reference_codes]{tce_reference_codes()}},
+\code{\link[=tce_reference_dates]{tce_reference_dates()}},
+\code{\link[=tce_reference_sources]{tce_reference_sources()}},
+\code{\link[=tce_remessa_works]{tce_remessa_works()}},
+\code{\link[=tce_remessa_works_execution]{tce_remessa_works_execution()}},
+\code{\link[=tce_remessa_works_geometry]{tce_remessa_works_geometry()}}
 }
 \concept{remessa}

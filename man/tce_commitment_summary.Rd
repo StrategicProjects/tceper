@@ -30,10 +30,10 @@ Retrieve original values, reinforcements and cancellations for budget
 commitments (\emph{empenhos}), for both municipal and state entities.
 }
 \seealso{
-Other commitments: 
-\code{\link{tce_commitment_liquidations}()},
-\code{\link{tce_commitment_payments}()},
-\code{\link{tce_state_commitment_items}()},
-\code{\link{tce_state_price_comparison}()}
+Other commitments:
+\code{\link[=tce_commitment_liquidations]{tce_commitment_liquidations()}},
+\code{\link[=tce_commitment_payments]{tce_commitment_payments()}},
+\code{\link[=tce_state_commitment_items]{tce_state_commitment_items()}},
+\code{\link[=tce_state_price_comparison]{tce_state_price_comparison()}}
 }
 \concept{commitments}

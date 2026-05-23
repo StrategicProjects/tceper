@@ -1,17 +1,17 @@
 {
-  "fonte": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!listar",
+  "fonte": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!listar",
   "coletado_em": "2026-02-12 19:55:35 -03",
   "total_metodos": 71,
   "metodos_ok": 71,
   "metodos_com_erro": 0,
   "metodos": [
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=19",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=19",
       "ok": true,
       "entidade": "ReceitasEstaduais",
       "descricao": "Relação das Receitas Estaduais",
       "grupo": "Receitas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ReceitasEstaduais!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ReceitasEstaduais!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -143,12 +143,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=18",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=18",
       "ok": true,
       "entidade": "ReceitasMunicipais",
       "descricao": "Relação das Receitas Municipais",
       "grupo": "Receitas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ReceitasMunicipais!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ReceitasMunicipais!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -308,12 +308,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=26",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=26",
       "ok": true,
       "entidade": "ReceitasPrevistas",
       "descricao": "Relação das Receitas Previstas (apenas Municipais)",
       "grupo": "Receitas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ReceitasPrevistas!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ReceitasPrevistas!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -419,12 +419,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=17",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=17",
       "ok": true,
       "entidade": "DespesasEstaduais",
       "descricao": "Relação das Despesas Estaduais",
       "grupo": "Despesas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/DespesasEstaduais!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/DespesasEstaduais!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -834,12 +834,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=16",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=16",
       "ok": true,
       "entidade": "DespesasMunicipais",
       "descricao": "Relação das Despesas Municipais - Chave composta (ID_EMPENHO, ANOREFERENCIA, NUMERO_EMPENHO e ID_UNIDADE_GESTORA)",
       "grupo": "Despesas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/DespesasMunicipais!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/DespesasMunicipais!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -1249,12 +1249,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=23",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=23",
       "ok": true,
       "entidade": "EmpenhoLiquidacao",
       "descricao": "Relação das Liquidações dos Empenhos Municipais e Estaduais",
       "grupo": "Despesas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/EmpenhoLiquidacao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/EmpenhoLiquidacao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -1394,12 +1394,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=24",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=24",
       "ok": true,
       "entidade": "EmpenhoPagamento",
       "descricao": "Relação dos Pagamentos dos Empenhos (apenas Municipais)",
       "grupo": "Despesas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/EmpenhoPagamento!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/EmpenhoPagamento!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -1561,12 +1561,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=25",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=25",
       "ok": true,
       "entidade": "EmpenhoResumo",
       "descricao": "Relação dos Valores Originais, Reforços e Estornos dos Empenhos Municipais e Estaduais",
       "grupo": "Despesas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/EmpenhoResumo!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/EmpenhoResumo!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -1672,12 +1672,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=37",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=37",
       "ok": true,
       "entidade": "TipoCredorMunicipal",
       "descricao": "Lista dos tipos de credores Municipal",
       "grupo": "Despesas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TipoCredorMunicipal!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TipoCredorMunicipal!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -1705,12 +1705,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=38",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=38",
       "ok": true,
       "entidade": "TipoCredorEstadual",
       "descricao": "Lista dos tipos de credores Estadual",
       "grupo": "Despesas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TipoCredorEstadual!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TipoCredorEstadual!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -1738,12 +1738,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=49",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=49",
       "ok": true,
       "entidade": "ItemEmpenhoEstadual",
       "descricao": "Relaçao de cada parte que compõem os empenhos Estaduais",
       "grupo": "Despesas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ItemEmpenhoEstadual!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ItemEmpenhoEstadual!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -1869,23 +1869,23 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=61",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=61",
       "ok": true,
       "entidade": "ComparativoPrecoEstado",
       "descricao": "Itens dos empenhos estaduais com valores para comparação de preços",
       "grupo": "Despesas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ComparativoPrecoEstado!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ComparativoPrecoEstado!<formato>",
       "formatos": [],
       "entrada": [],
       "saida": []
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=64",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=64",
       "ok": true,
       "entidade": "TransferenciasConcedidasMunicipais",
       "descricao": "Relação das transferências concedidas entre unidades juirisdicionadas do mesmo município",
       "grupo": "Despesas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TransferenciasConcedidasMunicipais!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TransferenciasConcedidasMunicipais!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -2047,12 +2047,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=20",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=20",
       "ok": true,
       "entidade": "Fornecedores",
       "descricao": "Relação dos Fornecedores",
       "grupo": "Fornecedores",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Fornecedores!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Fornecedores!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -2094,12 +2094,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=36",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=36",
       "ok": true,
       "entidade": "TipoCredorPessoa",
       "descricao": "Lista dos tipos de credores",
       "grupo": "Fornecedores",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TipoCredorPessoa!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TipoCredorPessoa!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -2127,12 +2127,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=44",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=44",
       "ok": true,
       "entidade": "Sancoes",
       "descricao": "Relação das sanções",
       "grupo": "Fornecedores",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Sancoes!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Sancoes!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -2270,12 +2270,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=33",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=33",
       "ok": true,
       "entidade": "Contratos",
       "descricao": "Listas dos Contratos Estaduais e Municipais",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Contratos!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Contratos!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -2631,12 +2631,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=50",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=50",
       "ok": true,
       "entidade": "ContratoDocumentos",
       "descricao": "Lista dos documentos de um contrato",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ContratoDocumentos!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ContratoDocumentos!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -2692,12 +2692,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=51",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=51",
       "ok": true,
       "entidade": "ContratoItemObjeto",
       "descricao": "Relaçao de cada parte que compõem o contrato",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ContratoItemObjeto!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ContratoItemObjeto!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -2795,12 +2795,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=53",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=53",
       "ok": true,
       "entidade": "Convenios",
       "descricao": "Listas dos Convênios Estaduais e Municipais",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Convenios!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Convenios!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -2980,12 +2980,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=34",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=34",
       "ok": true,
       "entidade": "TermoAditivo",
       "descricao": "Listas dos termos Aditivos dos contratos Estaduais e Municipais",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TermoAditivo!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TermoAditivo!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -3289,12 +3289,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=68",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=68",
       "ok": true,
       "entidade": "LicitacaoUG",
       "descricao": "Relação das Licitações",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/LicitacaoUG!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/LicitacaoUG!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -3644,12 +3644,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=27",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=27",
       "ok": true,
       "entidade": "LicitacoesDetalhes",
       "descricao": "Relação das Licitações com os respectivos Licitantes",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/LicitacoesDetalhes!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/LicitacoesDetalhes!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4049,12 +4049,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=54",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=54",
       "ok": true,
       "entidade": "LicitacoesDocumentos",
       "descricao": "Lista dos documentos de uma licitação",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/LicitacoesDocumentos!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/LicitacoesDocumentos!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4116,12 +4116,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=55",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=55",
       "ok": true,
       "entidade": "EstagioLicitacao",
       "descricao": "Listas dos estágios de uma licitação",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/EstagioLicitacao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/EstagioLicitacao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4149,12 +4149,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=56",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=56",
       "ok": true,
       "entidade": "ModalidadeLicitacao",
       "descricao": "Listas dos tipos de modalidade de uma licitação",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ModalidadeLicitacao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ModalidadeLicitacao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4182,12 +4182,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=57",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=57",
       "ok": true,
       "entidade": "SituacaoLicitacao",
       "descricao": "Listas dos tipos de situação de uma licitação",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/SituacaoLicitacao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/SituacaoLicitacao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4215,12 +4215,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=58",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=58",
       "ok": true,
       "entidade": "CaracteristicaObjeto",
       "descricao": "Listas dos tipos de característica de um objeto",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/CaracteristicaObjeto!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/CaracteristicaObjeto!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4248,12 +4248,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=59",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=59",
       "ok": true,
       "entidade": "ClassificacaoObjeto",
       "descricao": "Listas dos tipos de classificação de um objeto",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ClassificacaoObjeto!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ClassificacaoObjeto!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4281,12 +4281,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=63",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=63",
       "ok": true,
       "entidade": "FundamentacaoLegalLicitacao",
       "descricao": "Lista dos fundamentação legal da licitação",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/FundamentacaoLegalLicitacao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/FundamentacaoLegalLicitacao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4336,12 +4336,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=60",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=60",
       "ok": true,
       "entidade": "NaturezaObjeto",
       "descricao": "Listas dos tipos de natureza de um objeto",
       "grupo": "Licitações, Contratos e Convênios",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/NaturezaObjeto!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/NaturezaObjeto!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4369,12 +4369,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=29",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=29",
       "ok": true,
       "entidade": "Obras",
       "descricao": "Obras e serviços de engenharia fiscalizados pelo Tribunal de Contas.",
       "grupo": "Obras",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Obras!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Obras!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4486,12 +4486,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=31",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=31",
       "ok": true,
       "entidade": "ObrasDadosContratacao",
       "descricao": "Referem-se aos dados das empresas contratadas para a obra.",
       "grupo": "Obras",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ObrasDadosContratacao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ObrasDadosContratacao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4565,12 +4565,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=32",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=32",
       "ok": true,
       "entidade": "DadosObrasAuditoria",
       "descricao": "Referem-se aos dados das obras",
       "grupo": "Obras",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/DadosObrasAuditoria!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/DadosObrasAuditoria!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4624,12 +4624,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=30",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=30",
       "ok": true,
       "entidade": "TransporteEscolar",
       "descricao": "Serviços de transporte escolar fiscalizados pelo Tribunal de Contas.",
       "grupo": "Transporte Escolar",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TransporteEscolar!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TransporteEscolar!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4699,12 +4699,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=39",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=39",
       "ok": true,
       "entidade": "Determinacoes",
       "descricao": "Lista das determinações dos processos eletrônicos transitados em julgado",
       "grupo": "Processos",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Determinacoes!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Determinacoes!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -4946,12 +4946,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=62",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=62",
       "ok": true,
       "entidade": "Considerandos",
       "descricao": "Listas dos considerandos dos processos eletrônicos transitados em julgado",
       "grupo": "Processos",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Considerandos!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Considerandos!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -5191,12 +5191,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=40",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=40",
       "ok": true,
       "entidade": "Recomendacoes",
       "descricao": "Listas das recomendações dos processos eletrônicos transitados em julgado",
       "grupo": "Processos",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Recomendacoes!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Recomendacoes!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -5432,12 +5432,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=42",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=42",
       "ok": true,
       "entidade": "Resultados",
       "descricao": "Lista dos resultados dos processos eletrônicos transitados em julgado",
       "grupo": "Processos",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Resultados!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Resultados!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -5687,12 +5687,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=43",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=43",
       "ok": true,
       "entidade": "Processos",
       "descricao": "Listas dos processos físicos e eletrônicos formalizados",
       "grupo": "Processos",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Processos!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Processos!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -5846,12 +5846,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=45",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=45",
       "ok": true,
       "entidade": "DebitosMultas",
       "descricao": "Relação das débitos e multas",
       "grupo": "Processos",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/DebitosMultas!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/DebitosMultas!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -6003,12 +6003,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=65",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=65",
       "ok": true,
       "entidade": "DadosLimiteGastos",
       "descricao": "Dados de limites de gastos dos processos julgados de contas de governo",
       "grupo": "Processos",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/DadosLimiteGastos!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/DadosLimiteGastos!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -6184,12 +6184,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=66",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=66",
       "ok": true,
       "entidade": "ResultadosAPR",
       "descricao": "Lista dos resultados dos processos eletrônicos da modalidade Aposentadoria, Pensão e Reforma",
       "grupo": "Processos",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ResultadosAPR!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ResultadosAPR!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -6547,12 +6547,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=77",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=77",
       "ok": true,
       "entidade": "ResultadosTomadaContaEspecial",
       "descricao": "ResultadosTomadaContaEspecial",
       "grupo": "Processos",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ResultadosTomadaContaEspecial!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ResultadosTomadaContaEspecial!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -6938,12 +6938,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=2",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=2",
       "ok": true,
       "entidade": "ListaServidores",
       "descricao": "Lista dos servidores municipais e estaduais de Pernambuco (base Sagres Pessoal)",
       "grupo": "Pessoal",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/ListaServidores!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/ListaServidores!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7187,12 +7187,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=4",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=4",
       "ok": true,
       "entidade": "Municipios",
       "descricao": "Relação dos municípios",
       "grupo": "Informações básicas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Municipios!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Municipios!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7246,12 +7246,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=76",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=76",
       "ok": true,
       "entidade": "SubunidadesUnidadesJurisdicionadas",
       "descricao": "Relação das Subunidades das Unidades Jurisdicionadas",
       "grupo": "Informações básicas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/SubunidadesUnidadesJurisdicionadas!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/SubunidadesUnidadesJurisdicionadas!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7357,12 +7357,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=28",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=28",
       "ok": true,
       "entidade": "TipoCredor",
       "descricao": "Relação dos tipos de fornecedores",
       "grupo": "Informações básicas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TipoCredor!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TipoCredor!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7406,12 +7406,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=10",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=10",
       "ok": true,
       "entidade": "TipoFolha",
       "descricao": "Relação dos tipos de folha",
       "grupo": "Informações básicas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TipoFolha!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TipoFolha!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7433,12 +7433,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=8",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=8",
       "ok": true,
       "entidade": "TipoFonteRecurso",
       "descricao": "Relação das fontes de recursos",
       "grupo": "Informações básicas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TipoFonteRecurso!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TipoFonteRecurso!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7460,12 +7460,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=15",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=15",
       "ok": true,
       "entidade": "TipoMotivoInativacao",
       "descricao": "Relação dos tipos de motivo de inativação",
       "grupo": "Informações básicas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TipoMotivoInativacao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TipoMotivoInativacao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7499,12 +7499,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=5",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=5",
       "ok": true,
       "entidade": "UnidadesJurisdicionadas",
       "descricao": "Relação das Unidades Jurisdicionadas",
       "grupo": "Informações básicas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/UnidadesJurisdicionadas!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/UnidadesJurisdicionadas!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7646,12 +7646,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=21",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=21",
       "ok": true,
       "entidade": "UnidadesJurisdicionadasEstaduais",
       "descricao": "Relação das Unidades Jurisdicionais Estaduais",
       "grupo": "Informações básicas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/UnidadesJurisdicionadasEstaduais!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/UnidadesJurisdicionadasEstaduais!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7679,12 +7679,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=22",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=22",
       "ok": true,
       "entidade": "UnidadesJurisdicionadasMunicipais",
       "descricao": "Relação das Unidades Jurisdicionais Municipais",
       "grupo": "Informações básicas",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/UnidadesJurisdicionadasMunicipais!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/UnidadesJurisdicionadasMunicipais!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7762,12 +7762,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=69",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=69",
       "ok": true,
       "entidade": "TipoBeneficio",
       "descricao": "Tipo de benefício do lote/item",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/TipoBeneficio!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/TipoBeneficio!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7817,12 +7817,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=70",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=70",
       "ok": true,
       "entidade": "FonteReferencia",
       "descricao": "Possíveis fontes de referência para importação dos itens do orçamento estimativo",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/FonteReferencia!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/FonteReferencia!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7850,12 +7850,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=71",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=71",
       "ok": true,
       "entidade": "DataReferencia",
       "descricao": "Datas disponíveis para as fontes de referência utilizadas na importação dos itens do orçamento estimativo",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/DataReferencia!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/DataReferencia!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7891,12 +7891,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=72",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=72",
       "ok": true,
       "entidade": "CodigoReferencia",
       "descricao": "Códigos de referência para importação dos itens do orçamento estimativo",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/CodigoReferencia!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/CodigoReferencia!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -7960,12 +7960,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=73",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=73",
       "ok": true,
       "entidade": "IndiceAtualizacao",
       "descricao": "Índices de atualização que devem ser utilizados na planilha de importação do orçamento estimativo",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/IndiceAtualizacao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/IndiceAtualizacao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -8001,12 +8001,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=74",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=74",
       "ok": true,
       "entidade": "OrcamentoSituacao",
       "descricao": "Possíveis situações dos itens/lotes do orçamento estimativo",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/OrcamentoSituacao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/OrcamentoSituacao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -8056,12 +8056,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=78",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=78",
       "ok": true,
       "entidade": "Remessa_InstrumentoJuridico",
       "descricao": "Dados dos instrumentos jurídicos cadastrados no RemessaTCEPE",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_InstrumentoJuridico!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_InstrumentoJuridico!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -8391,12 +8391,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=79",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=79",
       "ok": true,
       "entidade": "Remessa_InstrumentoJuridicoDocumento",
       "descricao": "Documentos de um instrumento jurídico",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_InstrumentoJuridicoDocumento!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_InstrumentoJuridicoDocumento!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -8530,12 +8530,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=80",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=80",
       "ok": true,
       "entidade": "Remessa_InstrumentoJuridicoItens",
       "descricao": "Itens de um instrumento jurídico",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_InstrumentoJuridicoItens!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_InstrumentoJuridicoItens!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -8669,12 +8669,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=81",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=81",
       "ok": true,
       "entidade": "Remessa_InstrumentoJuridicoParticipantes",
       "descricao": "Partes de um instrumento jurídico",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_InstrumentoJuridicoParticipantes!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_InstrumentoJuridicoParticipantes!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -8766,12 +8766,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=82",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=82",
       "ok": true,
       "entidade": "Remessa_ProcessoContratacao",
       "descricao": "Dados dos processos de contratação cadastrados no RemessaTCEPE",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_ProcessoContratacao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_ProcessoContratacao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -9213,12 +9213,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=83",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=83",
       "ok": true,
       "entidade": "Remessa_ProcessoContratacaoDocumento",
       "descricao": "Documentos de um processo de contratação",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_ProcessoContratacaoDocumento!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_ProcessoContratacaoDocumento!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -9352,12 +9352,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=84",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=84",
       "ok": true,
       "entidade": "Remessa_ProcessoContratacaoOrcamento",
       "descricao": "Lotes e itens do orçamento de um processo de contratação",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_ProcessoContratacaoOrcamento!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_ProcessoContratacaoOrcamento!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -9617,12 +9617,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=85",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=85",
       "ok": true,
       "entidade": "Remessa_ProcessoContratacaoParticipantes",
       "descricao": "Lista de licitantes/participantes de um processo de contratação",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_ProcessoContratacaoParticipantes!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_ProcessoContratacaoParticipantes!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -9742,12 +9742,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=86",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=86",
       "ok": true,
       "entidade": "Remessa_Obra",
       "descricao": "Detalhes das obras públicas recebidas pelo sistema RemessaTCEPE",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_Obra!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_Obra!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -9909,12 +9909,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=87",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=87",
       "ok": true,
       "entidade": "Remessa_ObraExecucao",
       "descricao": "Detalhes das execuções das obras públicas recebidas pelo sistema RemessaTCEPE",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_ObraExecucao!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_ObraExecucao!<formato>",
       "formatos": [],
       "entrada": [
         {
@@ -10006,12 +10006,12 @@
       ]
     },
     {
-      "detail_url": "https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=88",
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=88",
       "ok": true,
       "entidade": "Remessa_ObraGeometria",
       "descricao": "Detalhes das geometrias das obras públicas recebidas pelo sistema RemessaTCEPE",
       "grupo": "RemessaTCEPE",
-      "url": "https://sistemas.tce.pe.gov.br:443/DadosAbertos/Remessa_ObraGeometria!<formato>",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_ObraGeometria!<formato>",
       "formatos": [],
       "entrada": [
         {

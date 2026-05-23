@@ -8,6 +8,18 @@ contracts, agreements, public works, legal processes, personnel and
 reference tables for all state and municipal government entities in
 Pernambuco.
 
+## Access to the API
+
+The TCE-PE API host (`sistemas.tcepe.tc.br`) is **geo-restricted** and
+only accepts requests from Brazilian IP addresses. Users outside Brazil
+will see connection or TLS errors. The discovery functions
+([`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md),
+[`tce_endpoint()`](https://strategicprojects.github.io/tceper/reference/tce_endpoint.md),
+[`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md),
+[`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md))
+are unaffected – they read from a built-in catalog and work offline from
+any location.
+
 ## Recommended workflow
 
 1.  **Discover** endpoints with
@@ -65,6 +77,8 @@ automatically.
 **Maintainer**: Andre Leite <leite@castlab.org>
 
 Authors:
+
+- Andre Leite <leite@castlab.org>
 
 - Marcos Wasilew <marcos.wasilew@gmail.com>
 

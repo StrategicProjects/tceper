@@ -45,9 +45,3 @@ mappings <- tibble::tibble(
 
 mappings
 
-## ----example, eval = FALSE----------------------------------------------------
-# tce_params("Contratos")
-# tce_fields("Contratos")
-# 
-# tce_contracts(codigo_efisco_ug = "510101", ano_contrato = "2025")
-

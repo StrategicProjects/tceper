@@ -28,8 +28,8 @@ A \link[tibble:tibble-package]{tibble}.
 Retrieve engineering works and services overseen by the Court of Accounts.
 }
 \seealso{
-Other public_works: 
-\code{\link{tce_public_works_audits}()},
-\code{\link{tce_public_works_contractors}()}
+Other public_works:
+\code{\link[=tce_public_works_audits]{tce_public_works_audits()}},
+\code{\link[=tce_public_works_contractors]{tce_public_works_contractors()}}
 }
 \concept{public_works}

@@ -1,5 +1,13 @@
 # Exploring endpoints, parameters, and fields
 
+> **Note** — Code chunks are shown but not executed at build time
+> (`eval = FALSE`). The discovery snippets
+> ([`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md),
+> [`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md),
+> [`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md))
+> work offline anywhere and can be run as-is from any network. The query
+> snippets require a Brazilian IP (the TCE-PE API is geo-restricted).
+
 This vignette shows how to *discover* endpoints and their input/output
 metadata using the built-in catalog shipped with **tceper**.
 

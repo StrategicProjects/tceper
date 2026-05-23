@@ -11,9 +11,18 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  eval = FALSE
+  eval = FALSE,
+  purl = FALSE  # The TCE-PE API is geo-restricted (Brazil-only). Skip code
+                # extraction so R CMD check does not try to run it on CRAN
+                # machines outside Brazil.
 )
 ```
+
+> **Note** — Code chunks are shown but not executed at build time
+> (`eval = FALSE`). The discovery snippets (`tce_catalog()`,
+> `tce_params()`, `tce_fields()`) work offline anywhere and can be run
+> as-is from any network. The query snippets require a Brazilian IP
+> (the TCE-PE API is geo-restricted).
 
 This vignette shows how to *discover* endpoints and their input/output
 metadata using the built-in catalog shipped with **tceper**.

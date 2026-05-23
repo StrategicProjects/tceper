@@ -29,14 +29,14 @@ A \link[tibble:tibble-package]{tibble}.
 Retrieve the list of formalized physical and electronic processes.
 }
 \seealso{
-Other processes: 
-\code{\link{tce_consideranda}()},
-\code{\link{tce_debts_fines}()},
-\code{\link{tce_determinations}()},
-\code{\link{tce_outcomes}()},
-\code{\link{tce_recommendations}()},
-\code{\link{tce_retirement_outcomes}()},
-\code{\link{tce_special_accountability}()},
-\code{\link{tce_spending_limits}()}
+Other processes:
+\code{\link[=tce_consideranda]{tce_consideranda()}},
+\code{\link[=tce_debts_fines]{tce_debts_fines()}},
+\code{\link[=tce_determinations]{tce_determinations()}},
+\code{\link[=tce_outcomes]{tce_outcomes()}},
+\code{\link[=tce_recommendations]{tce_recommendations()}},
+\code{\link[=tce_retirement_outcomes]{tce_retirement_outcomes()}},
+\code{\link[=tce_special_accountability]{tce_special_accountability()}},
+\code{\link[=tce_spending_limits]{tce_spending_limits()}}
 }
 \concept{processes}

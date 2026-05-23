@@ -29,8 +29,8 @@ A \link[tibble:tibble-package]{tibble}.
 Retrieve budgeted (forecast) revenue data. Municipal entities only.
 }
 \seealso{
-Other revenues: 
-\code{\link{tce_municipal_revenues}()},
-\code{\link{tce_state_revenues}()}
+Other revenues:
+\code{\link[=tce_municipal_revenues]{tce_municipal_revenues()}},
+\code{\link[=tce_state_revenues]{tce_state_revenues()}}
 }
 \concept{revenues}

@@ -7,6 +7,15 @@
 #' public works, legal processes, personnel and reference tables for all
 #' state and municipal government entities in Pernambuco.
 #'
+#' @section Access to the API:
+#'
+#' The TCE-PE API host (`sistemas.tcepe.tc.br`) is **geo-restricted**
+#' and only accepts requests from Brazilian IP addresses. Users outside
+#' Brazil will see connection or TLS errors. The discovery functions
+#' ([tce_catalog()], [tce_endpoint()], [tce_params()], [tce_fields()])
+#' are unaffected -- they read from a built-in catalog and work offline
+#' from any location.
+#'
 #' @section Recommended workflow:
 #'
 #' 1. **Discover** endpoints with [tce_catalog()] (filter with `search =`).

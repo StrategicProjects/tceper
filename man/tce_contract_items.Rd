@@ -29,20 +29,20 @@ A \link[tibble:tibble-package]{tibble}.
 Retrieve the individual items that compose a contract.
 }
 \seealso{
-Other procurement: 
-\code{\link{tce_agreements}()},
-\code{\link{tce_bid_details}()},
-\code{\link{tce_bid_documents}()},
-\code{\link{tce_bid_legal_basis}()},
-\code{\link{tce_bid_modalities}()},
-\code{\link{tce_bid_stages}()},
-\code{\link{tce_bid_statuses}()},
-\code{\link{tce_bids}()},
-\code{\link{tce_contract_amendments}()},
-\code{\link{tce_contract_documents}()},
-\code{\link{tce_contracts}()},
-\code{\link{tce_object_characteristics}()},
-\code{\link{tce_object_classifications}()},
-\code{\link{tce_object_nature}()}
+Other procurement:
+\code{\link[=tce_agreements]{tce_agreements()}},
+\code{\link[=tce_bid_details]{tce_bid_details()}},
+\code{\link[=tce_bid_documents]{tce_bid_documents()}},
+\code{\link[=tce_bid_legal_basis]{tce_bid_legal_basis()}},
+\code{\link[=tce_bid_modalities]{tce_bid_modalities()}},
+\code{\link[=tce_bid_stages]{tce_bid_stages()}},
+\code{\link[=tce_bid_statuses]{tce_bid_statuses()}},
+\code{\link[=tce_bids]{tce_bids()}},
+\code{\link[=tce_contract_amendments]{tce_contract_amendments()}},
+\code{\link[=tce_contract_documents]{tce_contract_documents()}},
+\code{\link[=tce_contracts]{tce_contracts()}},
+\code{\link[=tce_object_characteristics]{tce_object_characteristics()}},
+\code{\link[=tce_object_classifications]{tce_object_classifications()}},
+\code{\link[=tce_object_nature]{tce_object_nature()}}
 }
 \concept{procurement}

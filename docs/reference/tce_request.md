@@ -30,14 +30,15 @@ tce_request(
 
   A character string with the API method name (e.g., `"Contratos"`,
   `"DespesasEstaduais"`). See
-  <https://sistemas.tce.pe.gov.br/DadosAbertos/Exemplo!listar> for the
+  <https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!listar> for the
   full list of available endpoints.
 
 - ...:
 
-  Named query parameters passed to the API **exactly as the API expects
-  them** (typically `CamelCase`). `NULL` values are silently dropped.
-  See the API documentation for parameter names.
+  Named query parameters. You can use either the API names
+  (`CamelCase`/`UPPERCASE`) or the snake_case aliases shown by
+  [`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md).
+  `NULL` values are silently dropped.
 
 - clean_names:
 
@@ -54,13 +55,13 @@ tce_request(
 - progress:
 
   If `TRUE`, displays progress messages via
-  [cli::cli](https://cli.r-lib.org/reference/cli.html). Defaults to the
-  value of `getOption("tceper.progress")`, or `TRUE` if unset.
+  [cli](https://cli.r-lib.org/reference/cli.html). Defaults to the value
+  of `getOption("tceper.progress")`, or `TRUE` if unset.
 
 - verbose:
 
-  If `TRUE`, prints the final API URL to the console before performing
-  the request. Useful for debugging and testing. Defaults to
+  If `TRUE`, prints the final API URL, parameters, and response metadata
+  (status, content-type, size, elapsed time). Defaults to
   `getOption("tceper.verbose", FALSE)`.
 
 ## Value
@@ -73,14 +74,24 @@ found.
 
 ### API base URL
 
-`https://sistemas.tce.pe.gov.br/DadosAbertos/`
+`https://sistemas.tcepe.tc.br/DadosAbertos/`
+
+### Network access
+
+The API host only accepts connections from **Brazilian IP addresses**.
+Calls from outside Brazil are dropped at the network level and surface
+as a connection or TLS error. The offline discovery functions
+([`tce_catalog()`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md),
+[`tce_params()`](https://strategicprojects.github.io/tceper/reference/tce_params.md),
+[`tce_fields()`](https://strategicprojects.github.io/tceper/reference/tce_fields.md))
+do not require network access and work anywhere.
 
 ### URL construction
 
 The TCE-PE API uses Struts2-style URLs where `!` invokes a method (e.g.
 `Contratos!json`). The URL is built with
 [`paste0()`](https://rdrr.io/r/base/paste.html) to preserve the literal
-`!` — using
+`!` – using
 [`httr2::req_url_path_append()`](https://httr2.r-lib.org/reference/req_url.html)
 would encode it as `%21`, causing the server to ignore all query
 parameters.
@@ -93,16 +104,26 @@ filters.
 
 ### Encoding
 
-The API responds in ISO-8859-1 encoding, which is converted to UTF-8
-internally.
+The TCE-PE backend runs on **ISO-8859-1** (Latin-1), not UTF-8. The
+package handles this transparently in both directions:
+
+- **Response body** is decoded as Latin-1 and returned as UTF-8 R
+  strings, so accented Portuguese characters come through cleanly
+  (`São`, `Município`, `Conceição`, etc.).
+
+- **Query parameters** are transcoded UTF-8 -\> Latin-1 before
+  percent-encoding, so filtering by accented values works as expected
+  (e.g. `tce_municipalities(municipio = "São José da Coroa Grande")`).
+  You can pass any R string with accents – the conversion is automatic.
 
 ### Options
 
-- `tceper.progress` — set to `FALSE` to suppress all progress messages.
+- `tceper.progress` – set to `FALSE` to suppress all progress messages.
 
-- `tceper.verbose` — set to `TRUE` to always print the final API URL.
+- `tceper.verbose` – set to `TRUE` to always print request/response
+  details.
 
-- `tceper.cache_ttl` — cache time-to-live in seconds (default: `3600`).
+- `tceper.cache_ttl` – cache time-to-live in seconds (default: `3600`).
 
 ## Examples
 
@@ -111,7 +132,7 @@ if (FALSE) { # \dontrun{
 # Direct query to any endpoint
 tce_request("Contratos", CodigoEfiscoUG = "510101")
 
-# Show the final URL for debugging
+# Show full request/response details
 tce_request("Contratos", CodigoEfiscoUG = "510101", verbose = TRUE)
 
 # Keep original column names

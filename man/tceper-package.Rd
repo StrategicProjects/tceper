@@ -13,6 +13,17 @@ revenues, expenditures, commitments, procurement, contracts, agreements,
 public works, legal processes, personnel and reference tables for all
 state and municipal government entities in Pernambuco.
 }
+\section{Access to the API}{
+
+
+The TCE-PE API host (\code{sistemas.tcepe.tc.br}) is \strong{geo-restricted}
+and only accepts requests from Brazilian IP addresses. Users outside
+Brazil will see connection or TLS errors. The discovery functions
+(\code{\link[=tce_catalog]{tce_catalog()}}, \code{\link[=tce_endpoint]{tce_endpoint()}}, \code{\link[=tce_params]{tce_params()}}, \code{\link[=tce_fields]{tce_fields()}})
+are unaffected -- they read from a built-in catalog and work offline
+from any location.
+}
+
 \section{Recommended workflow}{
 
 \enumerate{
@@ -58,6 +69,7 @@ Default: \code{3600} (1 hour).}
 
 Authors:
 \itemize{
+  \item Andre Leite \email{leite@castlab.org}
   \item Marcos Wasilew \email{marcos.wasilew@gmail.com}
   \item Hugo Vasconcelos \email{hugo.vasconcelos@ufpe.br}
   \item Carlos Amorin \email{carlos.agaf@ufpe.br}

@@ -28,8 +28,8 @@ A \link[tibble:tibble-package]{tibble}.
 Retrieve data on companies contracted for public works.
 }
 \seealso{
-Other public_works: 
-\code{\link{tce_public_works}()},
-\code{\link{tce_public_works_audits}()}
+Other public_works:
+\code{\link[=tce_public_works]{tce_public_works()}},
+\code{\link[=tce_public_works_audits]{tce_public_works_audits()}}
 }
 \concept{public_works}

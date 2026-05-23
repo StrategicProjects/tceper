@@ -103,7 +103,7 @@ commands for inspecting the endpoint:
 ``` r
 
 tce_contracts(codigo_efisco_ug = "510101", verbose = TRUE)
-#> ℹ API URL: https://sistemas.tce.pe.gov.br/DadosAbertos/Contratos!json?CodigoEfiscoUG=510101
+#> ℹ API URL: https://sistemas.tcepe.tc.br/DadosAbertos/Contratos!json?CodigoEfiscoUG=510101
 #> ℹ To inspect this endpoint:
 #>     - Input parameters: tce_params("Contratos")
 #>     - Output fields: tce_fields("Contratos")
