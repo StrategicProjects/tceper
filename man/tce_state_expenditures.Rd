@@ -30,6 +30,8 @@ Retrieve state-level expenditure data.
 }
 \examples{
 \dontrun{
+# Not run: reaches the live TCE-PE API, which only accepts connections
+# from Brazilian IP addresses (unreachable from CRAN / most CI).
 tce_state_expenditures(id_unidade_gestora = "510101")
 }
 }

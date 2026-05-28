@@ -22,11 +22,9 @@ API; the \code{r_name} column shows the \code{snake_case} equivalent that you
 can pass to wrapper functions.
 }
 \examples{
-\dontrun{
 tce_params("Contratos")
 tce_params("Municipios")
 tce_params("LicitacaoUG")
-}
 }
 \seealso{
 \code{\link[=tce_fields]{tce_fields()}}, \code{\link[=tce_catalog]{tce_catalog()}}, \code{\link[=tce_endpoint]{tce_endpoint()}}

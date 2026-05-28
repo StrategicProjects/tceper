@@ -63,6 +63,8 @@ Other procurement:
 
 ``` r
 if (FALSE) { # \dontrun{
+# Not run: reaches the live TCE-PE API, which only accepts connections
+# from Brazilian IP addresses (unreachable from CRAN / most CI).
 tce_contracts(codigo_efisco_ug = "510101", verbose = TRUE)
 } # }
 ```

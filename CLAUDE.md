@@ -6,13 +6,18 @@ functions.
 
 ## Current status
 
-**0.1.3 submitted to CRAN on 2026-05-22 — awaiting response.**
+**0.1.4 resubmitted to CRAN on 2026-05-28 — awaiting response.**
+
+Resubmission addressing Benjamin Altmann's review of 0.1.3 (quote
+software/API names in Title/Description, add API web reference, unwrap
+offline-runnable examples and comment the remaining `\dontrun{}` ones).
 
 Until CRAN replies, treat the package as frozen:
 - No new commits to `master` unless they fix something CRAN explicitly
   asks about.
-- If CRAN requests revisions, bump to 0.1.4 (or follow the version
-  policy in their reply), update `cran-comments.md`, and resubmit.
+- If CRAN requests further revisions, bump to 0.1.5 (or follow the
+  version policy in their reply), update `cran-comments.md`, and
+  resubmit.
 - If CRAN accepts, the next development cycle starts at 0.1.4.9000.
 
 ## API quirks (these bite, write them down)

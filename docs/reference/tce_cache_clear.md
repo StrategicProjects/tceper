@@ -29,8 +29,8 @@ Invisibly returns the number of entries cleared.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 tce_cache_clear()              # clear everything
+#> ℹ No cached entries to clear.
 tce_cache_clear("Contratos")   # clear contract queries only
-} # }
+#> ℹ No cached entries to clear.
 ```

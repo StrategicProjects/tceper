@@ -17,9 +17,7 @@ the cache key (endpoint + parameters), row count, timestamp and age.
 Useful for understanding what is cached and when it will expire.
 }
 \examples{
-\dontrun{
 tce_cache_info()
-}
 }
 \seealso{
 \code{\link[=tce_cache_clear]{tce_cache_clear()}}

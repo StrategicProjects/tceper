@@ -20,10 +20,8 @@ When \code{clean_names = TRUE} (the default), column names are converted
 from the API's original names to \code{snake_case}.
 }
 \examples{
-\dontrun{
 tce_fields("Contratos")
 tce_fields("Municipios")
-}
 }
 \seealso{
 \code{\link[=tce_params]{tce_params()}}, \code{\link[=tce_catalog]{tce_catalog()}}, \code{\link[=tce_endpoint]{tce_endpoint()}}

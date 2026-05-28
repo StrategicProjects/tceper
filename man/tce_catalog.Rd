@@ -20,11 +20,9 @@ Data API, with their group, description and URL. Use \code{search} to filter
 by keyword.
 }
 \examples{
-\dontrun{
 tce_catalog()
 tce_catalog(search = "contrat")
 tce_catalog(search = "municipio")
-}
 }
 \seealso{
 \code{\link[=tce_params]{tce_params()}}, \code{\link[=tce_fields]{tce_fields()}}, \code{\link[=tce_endpoint]{tce_endpoint()}}

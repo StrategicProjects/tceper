@@ -46,9 +46,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' tce_endpoint("Contratos")
-#' }
 tce_endpoint <- function(endpoint) {
   cat <- .tce_catalog()
   met <- .tce_methods(cat)
@@ -79,11 +77,9 @@ tce_endpoint <- function(endpoint) {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' tce_catalog()
 #' tce_catalog(search = "contrat")
 #' tce_catalog(search = "municipio")
-#' }
 tce_catalog <- function(search = NULL) {
   cat <- .tce_catalog()
   met <- .tce_methods(cat)
@@ -118,11 +114,9 @@ tce_catalog <- function(search = NULL) {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' tce_params("Contratos")
 #' tce_params("Municipios")
 #' tce_params("LicitacaoUG")
-#' }
 tce_params <- function(endpoint) {
   e <- tce_endpoint(endpoint)
   ent <- e$entrada %||% list()
@@ -168,10 +162,8 @@ df
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' tce_fields("Contratos")
 #' tce_fields("Municipios")
-#' }
 tce_fields <- function(endpoint) {
   e <- tce_endpoint(endpoint)
   out <- e$saida %||% list()

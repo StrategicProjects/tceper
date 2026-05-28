@@ -1,3 +1,30 @@
+## Resubmission
+
+This is a resubmission. Thank you, Benjamin Altmann, for the careful
+review. I have addressed every point:
+
+* **Software / API names in single quotes.** The Title and Description
+  now write software and API names in single quotes ('Open Data API',
+  'httr2', 'cli'), while keeping `'snake_case'` quoted and leaving the
+  TCE-PE acronym unquoted, as advised.
+
+* **Web reference for the API in the Description.** Added
+  <https://sistemas.tcepe.tc.br/DadosAbertos/> to the Description, with
+  no space after `https:` and inside angle brackets for auto-linking.
+
+* **Examples.** I unwrapped every example that does not require network
+  access and is therefore runnable in well under 5 seconds: those for
+  `tce_catalog()`, `tce_endpoint()`, `tce_params()`, `tce_fields()`
+  (which read from the package's built-in offline catalog) and
+  `tce_cache_clear()`, `tce_cache_info()` (which inspect the in-memory
+  cache). These now run during automatic checks. For the remaining
+  examples, which can only reach the live API, I kept `\dontrun{}` (as
+  you agreed is appropriate here) and added a comment explaining the
+  reason, e.g. "Not run: reaches the live TCE-PE API, which only accepts
+  connections from Brazilian IP addresses".
+
+Thanks again for your time and guidance.
+
 ## R CMD check results
 
 0 errors | 0 warnings | 1 note

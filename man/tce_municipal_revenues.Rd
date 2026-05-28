@@ -30,6 +30,8 @@ Retrieve municipal-level revenue data.
 }
 \examples{
 \dontrun{
+# Not run: reaches the live TCE-PE API, which only accepts connections
+# from Brazilian IP addresses (unreachable from CRAN / most CI).
 tce_municipal_revenues(id_unidade_gestora = "384")
 }
 }

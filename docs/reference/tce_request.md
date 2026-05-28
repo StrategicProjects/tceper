@@ -129,6 +129,10 @@ package handles this transparently in both directions:
 
 ``` r
 if (FALSE) { # \dontrun{
+# Not run: these examples reach the live TCE-PE API, which only accepts
+# connections from Brazilian IP addresses and is therefore unreachable
+# from CRAN check machines and most CI runners.
+
 # Direct query to any endpoint
 tce_request("Contratos", CodigoEfiscoUG = "510101")
 

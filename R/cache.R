@@ -46,10 +46,8 @@ tce_cached <- function(key, expr, use_cache = TRUE) {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' tce_cache_clear()              # clear everything
 #' tce_cache_clear("Contratos")   # clear contract queries only
-#' }
 tce_cache_clear <- function(pattern = NULL) {
   keys <- ls(envir = tce_cache_env)
   if (!is.null(pattern)) keys <- grep(pattern, keys, value = TRUE)
@@ -76,9 +74,7 @@ tce_cache_clear <- function(pattern = NULL) {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' tce_cache_info()
-#' }
 tce_cache_info <- function() {
   keys <- ls(envir = tce_cache_env)
   if (length(keys) == 0) {

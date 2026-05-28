@@ -1,3 +1,16 @@
+# tceper 0.1.4
+
+## CRAN feedback
+
+* Quoted software and API names ('Open Data API', 'httr2', 'cli',
+  'snake_case') in the `DESCRIPTION` Title and Description, and added a
+  web reference to the API in the Description.
+* Unwrapped the offline-runnable examples (`tce_catalog()`,
+  `tce_endpoint()`, `tce_params()`, `tce_fields()`, `tce_cache_clear()`,
+  `tce_cache_info()`) so they run during automatic checks.
+* Added a comment to the remaining `\dontrun{}` examples explaining that
+  they reach the live, Brazil-geofenced API and cannot run on CRAN.
+
 # tceper 0.1.3
 
 ## Breaking changes

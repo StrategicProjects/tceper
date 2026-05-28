@@ -24,7 +24,8 @@ tibble if the cache is empty. The cache TTL is controlled by
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 tce_cache_info()
-} # }
+#> ℹ Cache is empty.
+#> # A tibble: 0 × 4
+#> # ℹ 4 variables: key <chr>, rows <int>, cached_at <dttm>, age_secs <dbl>
 ```

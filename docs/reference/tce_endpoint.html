@@ -15,7 +15,7 @@ programmatic access to endpoint metadata."><meta property="og:image" content="ht
 
     <a class="navbar-brand me-2" href="../index.html">tceper</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.4</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,9 +77,876 @@ parameters) and <code>saida</code> (output fields) when available.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="fu">tce_endpoint</span><span class="op">(</span><span class="st">"Contratos"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">tce_endpoint</span><span class="op">(</span><span class="st">"Contratos"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $detail_url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=33"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ok</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entidade</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Contratos"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Listas dos Contratos Estaduais e Municipais"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $grupo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Licitações, Contratos e Convênios"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://sistemas.tcepe.tc.br:443/DadosAbertos/Contratos!&lt;formato&gt;"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $formatos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> list()</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[1]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "UnidadeGestora"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[1]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[1]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(200)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[1]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[1]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Unidade Gestora"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[1]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[2]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[2]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "UnidadeOrcamentaria"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[2]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[2]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(200)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[2]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[2]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Unidade Gestora da SCA_LicitacoesDetalhes"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[2]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[3]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[3]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Esfera"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[3]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[3]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "char(2)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[3]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[3]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Esfera (E - Estadual ou M - Municipal)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[3]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[4]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[4]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Municipio"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[4]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[4]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(40)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[4]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[4]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Município"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[4]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[5]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[5]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Objeto"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[5]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[5]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(106)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[5]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[5]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Objeto"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[5]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[6]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[6]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NumeroContrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[6]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[6]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(50)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[6]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[6]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Número do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[6]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[7]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[7]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "AnoContrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[7]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[7]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "int(10)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[7]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[7]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Ano do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[7]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[8]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[8]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "TipoProcesso"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[8]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[8]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(100)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[8]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[8]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Tipo do Processo"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[8]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[9]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[9]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "AnoProcesso"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[9]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[9]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "int(10)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[9]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[9]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Ano do Processo"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[9]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[10]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[10]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CPF_CNPJ"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[10]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[10]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(18)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[10]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[10]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CPF ou CNPJ do Contratado"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[10]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[11]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[11]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "TipoDocumento"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[11]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[11]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(5)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[11]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[11]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Tipo do Documento do Contratado"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[11]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[12]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[12]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NumeroDocumento"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[12]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[12]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(20)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[12]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[12]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CPF ou CNPJ do Contratado"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[12]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[13]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[13]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NumeroDocumentoAjustado"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[13]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[13]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(30)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[13]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[13]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CPF ou CNPJ do Contratado sem Formatação"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[13]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[14]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[14]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "RazaoSocial"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[14]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[14]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(255)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[14]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[14]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Razão Social do Contratado"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[14]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[15]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[15]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Estagio"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[15]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[15]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(15)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[15]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[15]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Estagio do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[15]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[16]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[16]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Situacao"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[16]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[16]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(50)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[16]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[16]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Situacao do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[16]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[17]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[17]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Valor"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[17]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[17]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric(18,2)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[17]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[17]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Valor do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[17]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[18]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[18]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "SiglaUG"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[18]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[18]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(20)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[18]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[18]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Sigla da Unidade Gestora"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[18]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[19]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[19]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CodigoUG"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[19]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[19]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "int(10)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[19]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[19]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Codigo da Unidade Gestora no TCE"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[19]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[20]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[20]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CodigoEfiscoUG"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[20]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[20]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "char(6)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[20]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[20]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Codigo da Unidade Gestora no e-Fisco"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[20]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[21]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[21]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CodigoAudinUG"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[21]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[21]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(20)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[21]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[21]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Codigo da Unidade Gestora no Audin"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[21]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[22]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[22]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "PortariaComissaoLicitacao"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[22]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[22]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(100)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[22]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[22]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Número da Portaria na Comissão de Licitacao"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[22]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[23]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[23]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CodigoContrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[23]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[23]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "int(10)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[23]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[23]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Código do contrato no LICON"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[23]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[24]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[24]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CodigoPL"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[24]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[24]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "int(10)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[24]]$obrigatorio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "N"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[24]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Código do processo licitatório no LICON"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $entrada[[24]]$valor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[1]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "UnidadeGestora"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[1]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[1]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(200)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[1]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Unidade Gestora"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[2]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[2]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "UnidadeOrcamentaria"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[2]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[2]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(200)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[2]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Unidade Gestora da SCA_LicitacoesDetalhes"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[3]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[3]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Esfera"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[3]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[3]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "char(2)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[3]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Esfera (E -Estadual ou M - Municipal)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[4]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[4]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Municipio"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[4]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[4]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(40)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[4]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Município"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[5]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[5]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NumeroContrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[5]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[5]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(50)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[5]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Número do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[6]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[6]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "AnoContrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[6]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[6]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "int(10)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[6]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Ano do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[7]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[7]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "TipoProcesso"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[7]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[7]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(100)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[7]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Tipo do Processo"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[8]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[8]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "AnoProcesso"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[8]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[8]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "int(10)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[8]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Ano do Processo"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[9]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[9]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CPF_CNPJ"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[9]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[9]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(69)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[9]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CPF ou CNPJ do Contratado"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[10]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[10]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "TipoDocumento"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[10]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[10]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(5)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[10]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Tipo do Documento do Contratado"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[11]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[11]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NumeroDocumento"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[11]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[11]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(20)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[11]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CPF ou CNPJ do Contratado"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[12]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[12]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NumeroDocumentoAjustado"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[12]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[12]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(30)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[12]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CPF ou CNPJ do Contratado sem Formatação"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[13]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[13]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "RazaoSocial"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[13]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[13]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(255)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[13]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Razão Social do Contratado"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[14]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[14]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Objeto"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[14]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[14]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(106)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[14]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Objeto do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[15]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[15]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Vigencia"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[15]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[15]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(63)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[15]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Vigência do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[16]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[16]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Valor"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[16]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[16]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric(18,2)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[16]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Valor do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[17]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[17]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Estagio"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[17]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[17]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(15)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[17]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Estagio do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[18]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[18]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Situacao"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[18]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[18]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(50)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[18]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Situacao do Contrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[19]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[19]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "SiglaUG"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[19]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[19]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(20)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[19]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Sigla da Unidade Gestora"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[20]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[20]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CodigoUG"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[20]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[20]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "int(10)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[20]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Codigo da Unidade Gestora no TCE"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[21]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[21]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CodigoEfiscoUG"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[21]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[21]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "char(6)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[21]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Codigo da Unidade Gestora no e-Fisco"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[22]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[22]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CodigoAudinUG"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[22]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[22]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(20)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[22]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Codigo da Unidade Gestora no Audin"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[23]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[23]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "PortariaComissaoLicitacao"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[23]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[23]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(100)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[23]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Número da Portaria na Comissão de Licitacao"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[24]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[24]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "LinkArquivo"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[24]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "string"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[24]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "varchar(500)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[24]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Link para o Arquivo em PDF"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[25]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[25]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CodigoContrato"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[25]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[25]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "int(10)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[25]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Código do contrato no LICON"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[26]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[26]]$nome</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CodigoPL"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[26]]$tipo_api</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[26]]$tipo_db</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "int(10)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $saida[[26]]$descricao</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Código do processo licitatório no LICON"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

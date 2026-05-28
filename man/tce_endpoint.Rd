@@ -20,9 +20,7 @@ parameters (\code{entrada}) and output fields (\code{saida}). Useful for
 programmatic access to endpoint metadata.
 }
 \examples{
-\dontrun{
 tce_endpoint("Contratos")
-}
 }
 \seealso{
 \code{\link[=tce_catalog]{tce_catalog()}}, \code{\link[=tce_params]{tce_params()}}, \code{\link[=tce_fields]{tce_fields()}}

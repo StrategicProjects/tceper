@@ -20,10 +20,8 @@ By default clears everything; use \code{pattern} to selectively clear entries
 for specific endpoints.
 }
 \examples{
-\dontrun{
 tce_cache_clear()              # clear everything
 tce_cache_clear("Contratos")   # clear contract queries only
-}
 }
 \seealso{
 \code{\link[=tce_cache_info]{tce_cache_info()}}
