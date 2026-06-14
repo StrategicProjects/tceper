@@ -2,6 +2,8 @@
 
 ## tceper 0.1.4
 
+CRAN release: 2026-06-01
+
 ### CRAN feedback
 
 - Quoted software and API names (‘Open Data API’, ‘httr2’, ‘cli’,

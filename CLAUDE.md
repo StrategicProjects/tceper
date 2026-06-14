@@ -6,19 +6,13 @@ functions.
 
 ## Current status
 
-**0.1.4 resubmitted to CRAN on 2026-05-28 — awaiting response.**
+**0.1.4 published on CRAN on 2026-06-01.**
+<https://cran.r-project.org/web/packages/tceper/index.html>
 
-Resubmission addressing Benjamin Altmann's review of 0.1.3 (quote
-software/API names in Title/Description, add API web reference, unwrap
-offline-runnable examples and comment the remaining `\dontrun{}` ones).
-
-Until CRAN replies, treat the package as frozen:
-- No new commits to `master` unless they fix something CRAN explicitly
-  asks about.
-- If CRAN requests further revisions, bump to 0.1.5 (or follow the
-  version policy in their reply), update `cran-comments.md`, and
-  resubmit.
-- If CRAN accepts, the next development cycle starts at 0.1.4.9000.
+The freeze is over. Development is open again; the next cycle starts at
+`0.1.4.9000` (bump `Version` in `DESCRIPTION` before the first dev
+commit). Normal workflow applies — build + check before any
+release-relevant change, re-render pkgdown only when docs changed.
 
 ## API quirks (these bite, write them down)
 

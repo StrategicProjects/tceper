@@ -48,3 +48,9 @@ po/*~
 rsconnect/
 docs.zip
 .positai
+
+# pkgdown renders every root *.md (incl. CLAUDE.md) into the site;
+# it has no exclude config, so keep these internal-notes pages out of
+# the published site by never committing them.
+docs/CLAUDE.html
+docs/CLAUDE.md
