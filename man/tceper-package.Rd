@@ -65,11 +65,11 @@ Default: \code{3600} (1 hour).}
 }
 }
 \author{
-\strong{Maintainer}: Andre Leite \email{leite@castlab.org}
+\strong{Maintainer}: André Leite \email{leite@castlab.org}
 
 Authors:
 \itemize{
-  \item Andre Leite \email{leite@castlab.org}
+  \item André Leite \email{leite@castlab.org}
   \item Marcos Wasiliew \email{marcos.wasiliew@gmail.com} (\href{https://orcid.org/0009-0004-4694-3159}{ORCID})
   \item Hugo Vasconcelos \email{hugo.vasconcelos@ufpe.br}
   \item Carlos Amorim \email{carlos.agaf@ufpe.br}
