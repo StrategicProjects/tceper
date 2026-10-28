@@ -6,29 +6,37 @@ functions.
 
 ## Current status
 
-**0.1.5 submitted to CRAN on 2026-10-28** (previous: 0.1.4 published
-2026-06-01). Submission went through `devtools:::upload_cran()` (the
-public `submit_cran()` needs interactive `yesno()`s; with the user's
-go-ahead, call `upload_cran(pkg, built_path)` + `flag_release(pkg)`
-directly on the already-checked tarball). Maintainer confirmation
-email goes to `leite@castlab.org`. After acceptance: commit, tag
-`v0.1.5`, push (push publishes the pkgdown site from `master/docs`).
-Normal workflow — build + check before any release-relevant change,
-re-render pkgdown only when docs changed.
+**0.1.5 submitted to CRAN on 2026-10-28, awaiting acceptance**
+(previous: 0.1.4 published 2026-06-01). Everything is committed and
+pushed (`3e0be1c` on master); the pkgdown site is live at 0.1.5. **The
+only pending step is tagging `v0.1.5` once the CRAN acceptance email
+arrives** (nothing else — don't re-submit). The email confirmation link
+was clicked; the tarball was last seen in CRAN `incoming/pretest/`.
 
-**Dev cycle started 2026-10-28** (`0.1.4.9000`). An API sweep (all 72
-`Exemplo!detalhar` pages re-scraped and diffed against the packaged
-catalog) found: one new endpoint `Remessa_InstrumentoJuridicoTermos`
-(wrapped as `tce_legal_instrument_terms()`), a new `ORGAO` input param
-on `UnidadesJurisdicionadas`, and nothing removed or renamed. The
-catalog JSON was refreshed (also fixing 100 datetime entries where the
-original scraper glued `tipo_api` into `tipo_db`), and two latent
-`tce_params()` bugs were fixed: `required` never showed `TRUE` (API
-marks mandatory as `"S"`) and `type` always fell back to `"character"`
-(catalog key is `tipo_api`, not `tipo`). `R CMD check --as-cran`:
-Status OK. To re-run the sweep later: fetch
-`Exemplo!listar` + each `Exemplo!detalhar?dadosAbertos.id=N`
-(`detail_url` in the catalog) and diff `entrada`/`saida`.
+What 0.1.5 contains: an API sweep (all 72 `Exemplo!detalhar` pages
+re-scraped and diffed against the packaged catalog) found one new
+endpoint `Remessa_InstrumentoJuridicoTermos` (wrapped as
+`tce_legal_instrument_terms()`), a new `ORGAO` input param on
+`UnidadesJurisdicionadas`, and nothing removed or renamed. The catalog
+JSON was refreshed (also fixing 100 datetime entries where the original
+scraper glued `tipo_api` into `tipo_db`), and two latent `tce_params()`
+bugs were fixed: `required` never showed `TRUE` (API marks mandatory as
+`"S"`) and `type` always fell back to `"character"` (catalog key is
+`tipo_api`, not `tipo`). The sibling Python port
+(`../tcepepy`, 0.1.2) shipped the same changes to PyPI the same day.
+
+To re-run the API sweep later: fetch `Exemplo!listar` + each
+`Exemplo!detalhar?dadosAbertos.id=N` (`detail_url` in the catalog) and
+diff `entrada`/`saida`.
+
+Submission mechanics (learned 2026-10-28): `devtools::submit_cran()`
+fails under `Rscript` (interactive `yesno()`s) and `build_cran` no
+longer exists in devtools 2.5.2. With the user's go-ahead, call
+`devtools:::upload_cran(pkg, built_path)` on the already-checked
+tarball, then `usethis::with_project(pkg$path,
+devtools:::flag_release(pkg))` (writes `CRAN-SUBMISSION`). Confirmation
+email goes to the maintainer address in `DESCRIPTION`
+(`leite@castlab.org`).
 
 Note: pkgdown auto-renders every root `*.md` (including `CLAUDE.md`)
 and has no exclude config, so `docs/CLAUDE.{html,md}` are gitignored to
