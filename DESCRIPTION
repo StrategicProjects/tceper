@@ -1,6 +1,6 @@
 Package: tceper
 Title: Access the 'Open Data API' of Pernambuco Court of Accounts
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: c(
     person("André", "Leite", email = "leite@castlab.org", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-4718-9766")),

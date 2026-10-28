@@ -64,7 +64,7 @@ tce_endpoint <- function(endpoint) {
 
 #' List available API endpoints
 #'
-#' Returns a tibble listing all 71 endpoints available in the TCE-PE Open
+#' Returns a tibble listing all 72 endpoints available in the TCE-PE Open
 #' Data API, with their group, description and URL. Use `search` to filter
 #' by keyword.
 #'
@@ -133,8 +133,11 @@ tce_params <- function(endpoint) {
 df <- tibble::tibble(
   api_name     = vapply(ent, function(x) x$api_name %||% x$nome %||% x$parametro %||% NA_character_, character(1)),
   r_name       = NA_character_,
-  required     = vapply(ent, function(x) isTRUE(x$required %||% x$obrigatorio %||% FALSE), logical(1)),
-  type         = vapply(ent, function(x) x$type %||% x$tipo %||% NA_character_, character(1)),
+  required     = vapply(ent, function(x) {
+    r <- x$required %||% x$obrigatorio %||% FALSE
+    isTRUE(r) || identical(toupper(as.character(r)), "S")
+  }, logical(1)),
+  type         = vapply(ent, function(x) x$type %||% x$tipo %||% x$tipo_api %||% NA_character_, character(1)),
   description  = vapply(ent, function(x) x$description %||% x$descricao %||% NA_character_, character(1))
 )
 # Derive r_name when not provided by catalog
@@ -177,7 +180,7 @@ tce_fields <- function(endpoint) {
 
 df <- tibble::tibble(
   name        = vapply(out, function(x) x$name %||% x$campo %||% x$nome %||% NA_character_, character(1)),
-  type        = vapply(out, function(x) x$type %||% x$tipo %||% NA_character_, character(1)),
+  type        = vapply(out, function(x) x$type %||% x$tipo %||% x$tipo_api %||% NA_character_, character(1)),
   description = vapply(out, function(x) x$description %||% x$descricao %||% NA_character_, character(1))
 )
 df$type[is.na(df$type) | !nzchar(df$type)] <- "character"

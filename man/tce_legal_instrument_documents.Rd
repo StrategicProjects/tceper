@@ -32,6 +32,7 @@ Other remessa:
 \code{\link[=tce_budget_statuses]{tce_budget_statuses()}},
 \code{\link[=tce_legal_instrument_items]{tce_legal_instrument_items()}},
 \code{\link[=tce_legal_instrument_participants]{tce_legal_instrument_participants()}},
+\code{\link[=tce_legal_instrument_terms]{tce_legal_instrument_terms()}},
 \code{\link[=tce_legal_instruments]{tce_legal_instruments()}},
 \code{\link[=tce_procurement_process_budget]{tce_procurement_process_budget()}},
 \code{\link[=tce_procurement_process_documents]{tce_procurement_process_documents()}},

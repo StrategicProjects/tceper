@@ -162,6 +162,7 @@ reference:
       - tce_legal_instrument_documents
       - tce_legal_instrument_items
       - tce_legal_instrument_participants
+      - tce_legal_instrument_terms
       - tce_procurement_processes
       - tce_procurement_process_documents
       - tce_procurement_process_budget

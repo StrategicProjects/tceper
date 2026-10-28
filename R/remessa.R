@@ -131,6 +131,20 @@ tce_legal_instrument_participants <- function(..., verbose = getOption("tceper.v
   tce_cached(tce_cache_key("Remessa_InstrumentoJuridicoParticipantes", ..., call = .user_call), tce_request("Remessa_InstrumentoJuridicoParticipantes", ..., clean_names = clean_names, verbose = verbose), use_cache = cache)
 }
 
+#' Legal instrument terms (Remessa)
+#'
+#' Amendment terms ("termos") of legal instruments: number, object,
+#' signature date, updated validity dates and values.
+#'
+#' @inheritParams tce_legal_instruments
+#' @return A [tibble][tibble::tibble-package].
+#' @export
+#' @family remessa
+tce_legal_instrument_terms <- function(..., verbose = getOption("tceper.verbose", FALSE), cache = TRUE, clean_names = TRUE) {
+  .user_call <- rlang::caller_call()
+  tce_cached(tce_cache_key("Remessa_InstrumentoJuridicoTermos", ..., call = .user_call), tce_request("Remessa_InstrumentoJuridicoTermos", ..., clean_names = clean_names, verbose = verbose), use_cache = cache)
+}
+
 # ---- RemessaTCEPE: Procurement processes -------------------------------------
 
 #' Procurement processes (Remessa)

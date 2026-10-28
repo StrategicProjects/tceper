@@ -1,3 +1,34 @@
+# tceper 0.1.5
+
+## New features
+
+* **New endpoint wrapper `tce_legal_instrument_terms()`** for
+  `Remessa_InstrumentoJuridicoTermos`, added by TCE-PE after the 0.1.4
+  release: amendment terms ("termos") of legal instruments, with number,
+  object, signature date and updated validity dates/values.
+
+## Catalog updates
+
+* Refreshed the built-in catalog against the live API (2026-10-28). It
+  now lists all **72** endpoints, including the new
+  `Remessa_InstrumentoJuridicoTermos`.
+* `UnidadesJurisdicionadas` gained the input parameter `ORGAO`
+  (managing-unit name), now reflected in `tce_params()`.
+* Fixed 100 `datetime` entries whose API type had been glued into the
+  database type during the original scrape (`tipo_api` was `null`,
+  `tipo_db` was e.g. `"datetimedatetime(23,3)"`). They are now split
+  correctly (`"datetime"` + `"datetime(23,3)"`).
+
+## Bug fixes
+
+* `tce_params()` now reports `required = TRUE` for mandatory parameters.
+  The API marks them as `"S"`/`"N"`, which the previous logical test
+  never matched (e.g. both parameters of `CodigoReferencia` are
+  mandatory but were shown as optional).
+* `tce_params()` and `tce_fields()` now show the actual API type
+  (`string`, `numeric`, `datetime`) in the `type` column instead of
+  falling back to `"character"` for every field.
+
 # tceper 0.1.4
 
 ## CRAN feedback

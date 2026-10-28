@@ -13,19 +13,15 @@ metadata using the built-in catalog shipped with **tceper**.
 
 ## Discover endpoints with `tce_catalog()`
 
-``` r
-
-library(tceper)
-
-tce_catalog()
-```
+\
+[`library`](https://rdrr.io/r/base/library.html)`(`[`tceper`](https://strategicprojects.github.io/tceper/)`)`\
+\
+[`tce_catalog`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md)`(``)`
 
 Filter by keyword:
 
-``` r
-
-tce_catalog(search = "licit")
-```
+\
+[`tce_catalog`](https://strategicprojects.github.io/tceper/reference/tce_catalog.md)`(``search ``=`` ``"licit"``)`
 
 ## Inspect one endpoint
 
@@ -35,10 +31,8 @@ For instance, `LicitacaoUG`:
 
 ### Input parameters
 
-``` r
-
-tce_params("LicitacaoUG")
-```
+\
+[`tce_params`](https://strategicprojects.github.io/tceper/reference/tce_params.md)`(``"LicitacaoUG"``)`
 
 `api_name` is the exact query name expected by the API.
 
@@ -46,20 +40,16 @@ tce_params("LicitacaoUG")
 
 ### Output fields
 
-``` r
-
-tce_fields("LicitacaoUG")
-```
+\
+[`tce_fields`](https://strategicprojects.github.io/tceper/reference/tce_fields.md)`(``"LicitacaoUG"``)`
 
 ## Query using `snake_case` arguments
 
 Once you know which parameters exist, you can query with `snake_case`
 arguments (the package maps them to `api_name` internally).
 
-``` r
-
-tce_bids(anomodalidade = "2025")
-```
+\
+[`tce_bids`](https://strategicprojects.github.io/tceper/reference/tce_bids.md)`(``anomodalidade ``=`` ``"2025"``)`
 
 ## Parameter validation
 
@@ -67,18 +57,14 @@ tce_bids(anomodalidade = "2025")
 pass a parameter that does not exist for that endpoint, it aborts and
 shows the allowed parameter list.
 
-``` r
-
-# Example (invalid parameter name for this endpoint):
-tce_contracts(fog = "510101", verbose = TRUE)
-```
+\
+`# Example (invalid parameter name for this endpoint):`\
+[`tce_contracts`](https://strategicprojects.github.io/tceper/reference/tce_contracts.md)`(``fog ``=`` ``"510101"``, verbose ``=`` ``TRUE``)`
 
 To avoid this, inspect allowed parameters first:
 
-``` r
-
-tce_params("Contratos")
-```
+\
+[`tce_params`](https://strategicprojects.github.io/tceper/reference/tce_params.md)`(``"Contratos"``)`
 
 ## Working with cache
 
@@ -87,17 +73,13 @@ calls.
 
 You can inspect cache state with:
 
-``` r
-
-tce_cache_info()
-```
+\
+[`tce_cache_info`](https://strategicprojects.github.io/tceper/reference/tce_cache_info.md)`(``)`
 
 And clear it with:
 
-``` r
-
-tce_cache_clear()
-```
+\
+[`tce_cache_clear`](https://strategicprojects.github.io/tceper/reference/tce_cache_clear.md)`(``)`
 
 When `verbose = TRUE`, cache hits may print a short message indicating
 the returned object comes from cache.

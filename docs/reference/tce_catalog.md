@@ -1,6 +1,6 @@
 # List available API endpoints
 
-Returns a tibble listing all 71 endpoints available in the TCE-PE Open
+Returns a tibble listing all 72 endpoints available in the TCE-PE Open
 Data API, with their group, description and URL. Use `search` to filter
 by keyword.
 
@@ -32,7 +32,7 @@ A tibble with columns `endpoint`, `group`, `title`, and `url`.
 
 ``` r
 tce_catalog()
-#> # A tibble: 71 × 4
+#> # A tibble: 72 × 4
 #>    endpoint            group    title                                      url  
 #>    <chr>               <chr>    <chr>                                      <chr>
 #>  1 ReceitasEstaduais   Receitas Relação das Receitas Estaduais             http…
@@ -45,7 +45,7 @@ tce_catalog()
 #>  8 EmpenhoResumo       Despesas Relação dos Valores Originais, Reforços e… http…
 #>  9 TipoCredorMunicipal Despesas Lista dos tipos de credores Municipal      http…
 #> 10 TipoCredorEstadual  Despesas Lista dos tipos de credores Estadual       http…
-#> # ℹ 61 more rows
+#> # ℹ 62 more rows
 tce_catalog(search = "contrat")
 #> # A tibble: 9 × 4
 #>   endpoint                                 group                     title url  

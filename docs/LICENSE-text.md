@@ -1,4 +1,4 @@
 # License
 
-    YEAR: 2025
-    COPYRIGHT HOLDER: tceper authors
+YEAR: 2025\
+COPYRIGHT HOLDER: tceper authors\

@@ -1,18 +1,40 @@
 # tceper — project notes for Claude
 
 R client for the **Open Data API of TCE-PE** (Tribunal de Contas do
-Estado de Pernambuco). Wraps ~71 endpoints into tidy tibble-returning
+Estado de Pernambuco). Wraps 72 endpoints into tidy tibble-returning
 functions.
 
 ## Current status
 
-**0.1.4 published on CRAN on 2026-06-01.**
-<https://cran.r-project.org/web/packages/tceper/index.html>
+**0.1.5 submitted to CRAN on 2026-10-28** (previous: 0.1.4 published
+2026-06-01). Submission went through `devtools:::upload_cran()` (the
+public `submit_cran()` needs interactive `yesno()`s; with the user's
+go-ahead, call `upload_cran(pkg, built_path)` + `flag_release(pkg)`
+directly on the already-checked tarball). Maintainer confirmation
+email goes to `leite@castlab.org`. After acceptance: commit, tag
+`v0.1.5`, push (push publishes the pkgdown site from `master/docs`).
+Normal workflow — build + check before any release-relevant change,
+re-render pkgdown only when docs changed.
 
-The freeze is over. Development is open again; the next cycle starts at
-`0.1.4.9000` (bump `Version` in `DESCRIPTION` before the first dev
-commit). Normal workflow applies — build + check before any
-release-relevant change, re-render pkgdown only when docs changed.
+**Dev cycle started 2026-10-28** (`0.1.4.9000`). An API sweep (all 72
+`Exemplo!detalhar` pages re-scraped and diffed against the packaged
+catalog) found: one new endpoint `Remessa_InstrumentoJuridicoTermos`
+(wrapped as `tce_legal_instrument_terms()`), a new `ORGAO` input param
+on `UnidadesJurisdicionadas`, and nothing removed or renamed. The
+catalog JSON was refreshed (also fixing 100 datetime entries where the
+original scraper glued `tipo_api` into `tipo_db`), and two latent
+`tce_params()` bugs were fixed: `required` never showed `TRUE` (API
+marks mandatory as `"S"`) and `type` always fell back to `"character"`
+(catalog key is `tipo_api`, not `tipo`). `R CMD check --as-cran`:
+Status OK. To re-run the sweep later: fetch
+`Exemplo!listar` + each `Exemplo!detalhar?dadosAbertos.id=N`
+(`detail_url` in the catalog) and diff `entrada`/`saida`.
+
+Note: pkgdown auto-renders every root `*.md` (including `CLAUDE.md`)
+and has no exclude config, so `docs/CLAUDE.{html,md}` are gitignored to
+keep these internal notes off the published site. `build_site()` will
+recreate them locally each run — that's expected; they just never get
+committed.
 
 ## API quirks (these bite, write them down)
 

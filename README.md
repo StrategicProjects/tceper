@@ -6,12 +6,12 @@
 ![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/tceper) 
 ![CRAN Downloads](https://cranlogs.r-pkg.org/badges/grand-total/tceper) 
 ![License](https://img.shields.io/badge/license-MIT-darkviolet.svg) 
-![](https://img.shields.io/badge/devel%20version-0.1.3-blue.svg)
+![](https://img.shields.io/badge/devel%20version-0.1.5-blue.svg)
 <!-- badges: end -->
 
 `tceper` is an R client for the [TCE-PE](https://www.tce.pe.gov.br/) (Tribunal de Contas do Estado de Pernambuco) Open Data API.
 
-The package wraps **71 API endpoints** into user-friendly functions that accept `snake_case` parameter names and return tibbles. A built-in catalog lets you discover endpoints, inspect their input parameters and output fields — all without leaving R.
+The package wraps **72 API endpoints** into user-friendly functions that accept `snake_case` parameter names and return tibbles. A built-in catalog lets you discover endpoints, inspect their input parameters and output fields — all without leaving R.
 
 
 <table class="warning-banner"><tr><td>
@@ -37,6 +37,14 @@ endpoints and their respective parameters in the [official API documentation](ht
 </td></tr></table>
 
 ## Installation
+
+Install the released version from CRAN:
+
+``` r
+install.packages("tceper")
+```
+
+Or the development version from GitHub:
 
 ``` r
 # install.packages("remotes")
@@ -68,7 +76,7 @@ Before querying any endpoint, you can explore the built-in catalog directly from
 
 ```r
 tce_catalog()
-#> # A tibble: 71 × 4
+#> # A tibble: 72 × 4
 #>    endpoint               group          title                         url
 #>    <chr>                  <chr>          <chr>                         <chr>
 #>  1 ReceitasEstaduais      Receitas       Receitas Estaduais            …
@@ -82,13 +90,13 @@ tce_catalog(search = "licit")
 
 ```r
 tce_params("Contratos")
-#> ── Contratos has 23 parameters: ──────────────────────────────
+#> ── Contratos has 24 parameters: ──────────────────────────────
 #> ℹ unidade_gestora, unidade_orcamentaria, esfera, …
 #> ── Dictionary ────────────────────────────────────────────────
-#> # A tibble: 23 × 5
-#>    api_name      r_name          required type      description
-#>    <chr>         <chr>           <lgl>    <chr>     <chr>
-#>  1 UnidadeGesto… unidade_gestor… FALSE    character Unidade Gestora
+#> # A tibble: 24 × 5
+#>    api_name      r_name          required type   description
+#>    <chr>         <chr>           <lgl>    <chr>  <chr>
+#>  1 UnidadeGesto… unidade_gestor… FALSE    string Unidade Gestora
 #>  …
 ```
 
@@ -131,7 +139,7 @@ options(tceper.verbose = TRUE)
 
 ## Cache
 
-All 71 wrapper functions cache results in memory, keyed by endpoint + parameters. Default TTL is 1 hour.
+All 72 wrapper functions cache results in memory, keyed by endpoint + parameters. Default TTL is 1 hour.
 
 ```r
 tce_contracts(codigo_efisco_ug = "510101")       # hits the API

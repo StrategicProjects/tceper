@@ -1,8 +1,8 @@
 {
   "fonte": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!listar",
-  "coletado_em": "2026-02-12 19:55:35 -03",
-  "total_metodos": 71,
-  "metodos_ok": 71,
+  "coletado_em": "2026-10-28 18:27:52 -03",
+  "total_metodos": 72,
+  "metodos_ok": 72,
   "metodos_com_erro": 0,
   "metodos": [
     {
@@ -565,8 +565,8 @@
         },
         {
           "nome": "DATAEMPENHO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data do empenho",
           "valor": null
@@ -761,8 +761,8 @@
         },
         {
           "nome": "DATAEMPENHO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data do Empenho"
         },
         {
@@ -996,8 +996,8 @@
         },
         {
           "nome": "DATAEMPENHO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data do empenho (formato: AAAA-MM-DD)",
           "valor": null
@@ -1182,8 +1182,8 @@
         },
         {
           "nome": "DATAEMPENHO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data do Emepenho"
         },
         {
@@ -1307,8 +1307,8 @@
         },
         {
           "nome": "DATA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data",
           "valor": null
@@ -1375,8 +1375,8 @@
         },
         {
           "nome": "DATA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data"
         },
         {
@@ -1468,8 +1468,8 @@
         },
         {
           "nome": "DATA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data",
           "valor": null
@@ -1548,8 +1548,8 @@
         },
         {
           "nome": "DATA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data"
         },
         {
@@ -1611,8 +1611,8 @@
         },
         {
           "nome": "DATA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data",
           "valor": null
@@ -1653,8 +1653,8 @@
         },
         {
           "nome": "DATA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data"
         },
         {
@@ -2145,16 +2145,16 @@
         },
         {
           "nome": "DataFim",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data de fim da sanção",
           "valor": null
         },
         {
           "nome": "DataInicio",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data de início da sanção",
           "valor": null
@@ -2221,14 +2221,14 @@
         },
         {
           "nome": "DataFim",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de fim da sanção"
         },
         {
           "nome": "DataInicio",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de início da sanção"
         },
         {
@@ -2649,8 +2649,8 @@
         },
         {
           "nome": "Data",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data do arquivo",
           "valor": null
@@ -2673,8 +2673,8 @@
         },
         {
           "nome": "Data",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data do arquivo"
         },
         {
@@ -2821,24 +2821,24 @@
         },
         {
           "nome": "DATA_PUBLICAÇAO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data da publicação do convênio",
           "valor": null
         },
         {
           "nome": "DATA_INICIO_VIGENCIA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data de início da vigência do convênio",
           "valor": null
         },
         {
           "nome": "DATA_FINAL_VIGENCIA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data final da vigência do convênio",
           "valor": null
@@ -2943,20 +2943,20 @@
         },
         {
           "nome": "DATA_PUBLICAÇAO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data da publicação do convênio"
         },
         {
           "nome": "DATA_INICIO_VIGENCIA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de início da vigência do convênio"
         },
         {
           "nome": "DATA_FINAL_VIGENCIA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data final da vigência do convênio"
         },
         {
@@ -3371,8 +3371,8 @@
         },
         {
           "nome": "DATAPUBLICACAOHOMOLOGACAO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data de Publicação da Homologação",
           "valor": null
@@ -3411,8 +3411,8 @@
         },
         {
           "nome": "DATASESSAOABERTURA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data da Sessao de Abertura",
           "valor": null
@@ -3493,8 +3493,8 @@
         },
         {
           "nome": "DATAPUBLICACAOHOMOLOGACAO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de Publicação da Homologação"
         },
         {
@@ -3547,20 +3547,20 @@
         },
         {
           "nome": "DATAEMISSAOEDITAL",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de Emissao do Edital"
         },
         {
           "nome": "DATAPUBLICACAOHABILITACAO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de Publicacao da Habilitacao"
         },
         {
           "nome": "DATAPUBLICACAOJULGAMENTO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Datade Publicacao Julgamento"
         },
         {
@@ -3631,8 +3631,8 @@
         },
         {
           "nome": "DATASESSAOABERTURA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data da Sessao de Abertura"
         },
         {
@@ -3734,8 +3734,8 @@
         },
         {
           "nome": "DATAPUBLICACAOHOMOLOGACAO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data de Publicação da Homologação",
           "valor": null
@@ -3798,8 +3798,8 @@
         },
         {
           "nome": "DATASESSAOABERTURA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data da Sessao de Abertura",
           "valor": null
@@ -3886,8 +3886,8 @@
         },
         {
           "nome": "DATAPUBLICACAOHOMOLOGACAO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de Publicação da Homologação"
         },
         {
@@ -3952,20 +3952,20 @@
         },
         {
           "nome": "DATAEMISSAOEDITAL",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de Emissao do Edital"
         },
         {
           "nome": "DATAPUBLICACAOHABILITACAO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de Publicacao da Habilitacao"
         },
         {
           "nome": "DATAPUBLICACAOJULGAMENTO",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Datade Publicacao Julgamento"
         },
         {
@@ -4036,8 +4036,8 @@
         },
         {
           "nome": "DATASESSAOABERTURA",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data da Sessao de Abertura"
         },
         {
@@ -4059,8 +4059,8 @@
       "entrada": [
         {
           "nome": "Data",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data do arquivo",
           "valor": null
@@ -4091,8 +4091,8 @@
         },
         {
           "nome": "Data",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data do arquivo"
         },
         {
@@ -4403,8 +4403,8 @@
         },
         {
           "nome": "DataUltimaAuditoria",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data da última auditoria",
           "valor": null
@@ -4437,8 +4437,8 @@
         },
         {
           "nome": "DataUltimaAuditoria",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data da última auditoria"
         },
         {
@@ -4449,8 +4449,8 @@
         },
         {
           "nome": "DataInicial",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data inicial da obra"
         },
         {
@@ -4575,8 +4575,8 @@
       "entrada": [
         {
           "nome": "DataUltimaAuditoria",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data da última auditoria",
           "valor": null
@@ -4658,8 +4658,8 @@
         },
         {
           "nome": "DataUltimaAuditoria",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data da última auditoria",
           "valor": null
@@ -4692,8 +4692,8 @@
         },
         {
           "nome": "DataUltimaAuditoria",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data da última auditoria"
         }
       ]
@@ -4805,8 +4805,8 @@
         },
         {
           "nome": "DataSessaoJulgamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da sesssão do julgamento",
           "valor": null
@@ -4921,8 +4921,8 @@
         },
         {
           "nome": "DataSessaoJulgamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da sessão"
         },
         {
@@ -5044,8 +5044,8 @@
         },
         {
           "nome": "DataSessaoJulgamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da sesssão do julgamento",
           "valor": null
@@ -5154,8 +5154,8 @@
         },
         {
           "nome": "DataSessaoJulgamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da sessão"
         },
         {
@@ -5297,8 +5297,8 @@
         },
         {
           "nome": "DataSessaoJulgamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da sesssão do julgamento",
           "valor": null
@@ -5407,8 +5407,8 @@
         },
         {
           "nome": "DataSessaoJulgamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da sessão"
         },
         {
@@ -5530,8 +5530,8 @@
         },
         {
           "nome": "DataSessaoJulgamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da sesssão do julgamento",
           "valor": null
@@ -5656,8 +5656,8 @@
         },
         {
           "nome": "DataSessaoJulgamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da sessão"
         },
         {
@@ -6290,8 +6290,8 @@
         },
         {
           "nome": "DataDeliberacao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da Deliberacao",
           "valor": null
@@ -6322,8 +6322,8 @@
         },
         {
           "nome": "DataPublicacaoDOE",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da Publicacao da Deliberacao no DO",
           "valor": null
@@ -6354,8 +6354,8 @@
         },
         {
           "nome": "DataRepublicacaoDOE",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da Republicacao no DO",
           "valor": null
@@ -6386,8 +6386,8 @@
         },
         {
           "nome": "DataAnulacao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da Anulacao",
           "valor": null
@@ -6468,8 +6468,8 @@
         },
         {
           "nome": "DataDeliberacao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da Deliberacao"
         },
         {
@@ -6492,8 +6492,8 @@
         },
         {
           "nome": "DataPublicacaoDOE",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da Publicacao da Deliberacao no DO"
         },
         {
@@ -6516,8 +6516,8 @@
         },
         {
           "nome": "DataRepublicacaoDOE",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da Republicacao no DO"
         },
         {
@@ -6540,8 +6540,8 @@
         },
         {
           "nome": "DataAnulacao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da Anulacao"
         }
       ]
@@ -6725,24 +6725,24 @@
         },
         {
           "nome": "DataDeliberacao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da deliberação do processo",
           "valor": null
         },
         {
           "nome": "DataPublicacaoDOE",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da publicação da deliberação do processo",
           "valor": null
         },
         {
           "nome": "DataRepublicacaoDOE",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da republicação da deliberação do processo, caso exista",
           "valor": null
@@ -6765,8 +6765,8 @@
         },
         {
           "nome": "DataAnulacao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da anulação da deliberação, caso exista",
           "valor": null
@@ -6901,20 +6901,20 @@
         },
         {
           "nome": "DataDeliberacao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da deliberação do processo"
         },
         {
           "nome": "DataPublicacaoDOE",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da publicação da deliberação do processo"
         },
         {
           "nome": "DataRepublicacaoDOE",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da republicação da deliberação do processo, caso exista"
         },
         {
@@ -6931,8 +6931,8 @@
         },
         {
           "nome": "DataAnulacao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da anulação da deliberação, caso exista"
         }
       ]
@@ -6996,8 +6996,8 @@
         },
         {
           "nome": "DataAdmissao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data da admissão na UJ",
           "valor": null
@@ -7044,8 +7044,8 @@
         },
         {
           "nome": "DataIngresso",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data de ingresso no vínculo",
           "valor": null
@@ -7060,8 +7060,8 @@
         },
         {
           "nome": "DataAfastamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data de afastamento do vínculo",
           "valor": null
@@ -7114,8 +7114,8 @@
         },
         {
           "nome": "DataAdmissao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data da admissão na UJ"
         },
         {
@@ -7150,8 +7150,8 @@
         },
         {
           "nome": "DataIngresso",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data de ingresso no vínculo"
         },
         {
@@ -7162,8 +7162,8 @@
         },
         {
           "nome": "DataAfastamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data de afastamento do vínculo"
         },
         {
@@ -7288,16 +7288,16 @@
         },
         {
           "nome": "DataCriacaoSubunidade",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data de Criação da Subunidade",
           "valor": null
         },
         {
           "nome": "DataExtincaoSubunidade",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "obrigatorio": "N",
           "descricao": "Data de Extinção da Subunidade",
           "valor": null
@@ -7338,14 +7338,14 @@
         },
         {
           "nome": "DataCriacaoSubunidade",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de Criação da Subunidade"
         },
         {
           "nome": "DataExtincaoSubunidade",
-          "tipo_api": null,
-          "tipo_db": "datetimedatetime(23,3)",
+          "tipo_api": "datetime",
+          "tipo_db": "datetime(23,3)",
           "descricao": "Data de Extinção da Subunidade"
         },
         {
@@ -7529,6 +7529,14 @@
           "tipo_db": "varchar(50)",
           "obrigatorio": "N",
           "descricao": "Natureza do órgao",
+          "valor": null
+        },
+        {
+          "nome": "ORGAO",
+          "tipo_api": "string",
+          "tipo_db": "varchar(200)",
+          "obrigatorio": "N",
+          "descricao": "Unidade Gestora",
           "valor": null
         },
         {
@@ -8154,24 +8162,24 @@
         },
         {
           "nome": "DataAssinatura",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data de assinatura do instrumento jurídico",
           "valor": null
         },
         {
           "nome": "DataInicioVigencia",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data de início de vigência atualizada com os termos",
           "valor": null
         },
         {
           "nome": "DataFimVigencia",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "Data de fim de vigência atualizada com os termos",
           "valor": null
@@ -8318,20 +8326,20 @@
         },
         {
           "nome": "DataAssinatura",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data de assinatura do instrumento jurídico"
         },
         {
           "nome": "DataInicioVigencia",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data de início de vigência atualizada com os termos"
         },
         {
           "nome": "DataFimVigencia",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "Data de fim de vigência atualizada com os termos"
         },
         {
@@ -8766,6 +8774,187 @@
       ]
     },
     {
+      "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=89",
+      "ok": true,
+      "entidade": "Remessa_InstrumentoJuridicoTermos",
+      "descricao": "Termos dos instrumentos jurídicos",
+      "grupo": "RemessaTCEPE",
+      "url": "https://sistemas.tcepe.tc.br:443/DadosAbertos/Remessa_InstrumentoJuridicoTermos!<formato>",
+      "formatos": [],
+      "entrada": [
+        {
+          "nome": "TermoContratoId",
+          "tipo_api": "numeric",
+          "tipo_db": "int(10)",
+          "obrigatorio": "N",
+          "descricao": "id do termo do contrato",
+          "valor": null
+        },
+        {
+          "nome": "InstrumentoJuridicoId",
+          "tipo_api": "numeric",
+          "tipo_db": "int(10)",
+          "obrigatorio": "N",
+          "descricao": "id do instrumento jurídico",
+          "valor": null
+        },
+        {
+          "nome": "NumeroTermo",
+          "tipo_api": "string",
+          "tipo_db": "varchar(50)",
+          "obrigatorio": "N",
+          "descricao": "número do termo",
+          "valor": null
+        },
+        {
+          "nome": "ObjetoTermo",
+          "tipo_api": "string",
+          "tipo_db": "varchar(5000)",
+          "obrigatorio": "N",
+          "descricao": "objeto do termo",
+          "valor": null
+        },
+        {
+          "nome": "DataAssinaturaTermo",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
+          "obrigatorio": "N",
+          "descricao": "data da assinatura do termo",
+          "valor": null
+        },
+        {
+          "nome": "TipoTermoContrato",
+          "tipo_api": "string",
+          "tipo_db": "varchar(100)",
+          "obrigatorio": "N",
+          "descricao": "tipo do termo do contrato",
+          "valor": null
+        },
+        {
+          "nome": "DataInicioVigenciaContrato",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
+          "obrigatorio": "N",
+          "descricao": "nova data de início de vigência do contrato",
+          "valor": null
+        },
+        {
+          "nome": "DataFimVigenciaContrato",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
+          "obrigatorio": "N",
+          "descricao": "nova data de fim de vigência do contrato",
+          "valor": null
+        },
+        {
+          "nome": "ValorContrato",
+          "tipo_api": "numeric",
+          "tipo_db": "numeric(20,4)",
+          "obrigatorio": "N",
+          "descricao": "novo valor do contrato",
+          "valor": null
+        },
+        {
+          "nome": "ValorRepassado",
+          "tipo_api": "numeric",
+          "tipo_db": "numeric(20,4)",
+          "obrigatorio": "N",
+          "descricao": "novo valor repassado do contrato",
+          "valor": null
+        },
+        {
+          "nome": "ValorTermo",
+          "tipo_api": "numeric",
+          "tipo_db": "numeric(20,4)",
+          "obrigatorio": "N",
+          "descricao": "valor do termo",
+          "valor": null
+        },
+        {
+          "nome": "CodigoLegadoLICON",
+          "tipo_api": "numeric",
+          "tipo_db": "int(10)",
+          "obrigatorio": "N",
+          "descricao": "codigo do termo no antigo LICON (caso tenha sido migrado)",
+          "valor": null
+        }
+      ],
+      "saida": [
+        {
+          "nome": "termoContratoId",
+          "tipo_api": "numeric",
+          "tipo_db": "int(10)",
+          "descricao": "id do termo do contrato"
+        },
+        {
+          "nome": "InstrumentoJuridicoId",
+          "tipo_api": "numeric",
+          "tipo_db": "int(10)",
+          "descricao": "id do instrumento jurídico"
+        },
+        {
+          "nome": "NumeroTermo",
+          "tipo_api": "string",
+          "tipo_db": "varchar(50)",
+          "descricao": "número do termo"
+        },
+        {
+          "nome": "ObjetoTermo",
+          "tipo_api": "string",
+          "tipo_db": "varchar(5000)",
+          "descricao": "objeto do termo"
+        },
+        {
+          "nome": "DataAssinaturaTermo",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
+          "descricao": "data da assinatura do termo"
+        },
+        {
+          "nome": "TipoTermoContrato",
+          "tipo_api": "string",
+          "tipo_db": "varchar(100)",
+          "descricao": "tipo do termo do contrato"
+        },
+        {
+          "nome": "DataInicioVigenciaContrato",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
+          "descricao": "nova data de início de vigência do contrato"
+        },
+        {
+          "nome": "DataFimVigenciaContrato",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
+          "descricao": "nova data de fim de vigência do contrato"
+        },
+        {
+          "nome": "ValorContrato",
+          "tipo_api": "numeric",
+          "tipo_db": "numeric(20,4)",
+          "descricao": "novo valor do contrato"
+        },
+        {
+          "nome": "ValorRepassado",
+          "tipo_api": "numeric",
+          "tipo_db": "numeric(20,4)",
+          "descricao": "novo valor repassado do contrato"
+        },
+        {
+          "nome": "ValorTermo",
+          "tipo_api": "numeric",
+          "tipo_db": "numeric(20,4)",
+          "descricao": "valor do termo"
+        },
+        {
+          "nome": "CodigoLegadoLICON",
+          "tipo_api": "numeric",
+          "tipo_db": "int(10)",
+          "descricao": "codigo do termo no antigo LICON (caso tenha sido migrado)"
+        }
+      ]
+    },
+    {
       "detail_url": "https://sistemas.tcepe.tc.br/DadosAbertos/Exemplo!detalhar?dadosAbertos.id=82",
       "ok": true,
       "entidade": "Remessa_ProcessoContratacao",
@@ -8944,16 +9133,16 @@
         },
         {
           "nome": "dataPublicacao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "data de publicação do processo de contratação",
           "valor": null
         },
         {
           "nome": "dataSessaoAbertura",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "data da sessão de abertura do processo de contratação",
           "valor": null
@@ -8992,16 +9181,16 @@
         },
         {
           "nome": "dataOrcamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "data do orçamento do processo de contratação",
           "valor": null
         },
         {
           "nome": "dataResultado",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "data do resultado do processo de contratação",
           "valor": null
@@ -9152,14 +9341,14 @@
         },
         {
           "nome": "dataPublicacao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "data de publicação do processo de contratação"
         },
         {
           "nome": "dataSessaoAbertura",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "data da sessão de abertura do processo de contratação"
         },
         {
@@ -9188,14 +9377,14 @@
         },
         {
           "nome": "dataOrcamento",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "data do orçamento do processo de contratação"
         },
         {
           "nome": "dataResultado",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "data do resultado do processo de contratação"
         },
         {
@@ -9434,8 +9623,8 @@
         },
         {
           "nome": "DataReferencia",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "data de referência do item do orçamento",
           "valor": null
@@ -9562,8 +9751,8 @@
         },
         {
           "nome": "DataReferencia",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "data de referência do item do orçamento"
         },
         {
@@ -9784,16 +9973,16 @@
         },
         {
           "nome": "dataInicioObra",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "data de início da obra",
           "valor": null
         },
         {
           "nome": "dataConclusaoObra",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "data de conclusão da obra",
           "valor": null
@@ -9866,14 +10055,14 @@
         },
         {
           "nome": "dataInicioObra",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "data de início da obra"
         },
         {
           "nome": "dataConclusaoObra",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "data de conclusão da obra"
         },
         {
@@ -9943,8 +10132,8 @@
         },
         {
           "nome": "mesAnoExecucao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "obrigatorio": "N",
           "descricao": "mês/ano da execução da obra no formato de data (o dia será sempre 01)",
           "valor": null
@@ -9987,8 +10176,8 @@
         },
         {
           "nome": "mesAnoExecucao",
-          "tipo_api": null,
-          "tipo_db": "datetimedate(10)",
+          "tipo_api": "datetime",
+          "tipo_db": "date(10)",
           "descricao": "mês/ano da execução da obra no formato de data (o dia será sempre 01)"
         },
         {

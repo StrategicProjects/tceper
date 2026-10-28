@@ -41,29 +41,29 @@ tce_fields("Contratos")
 #>   PortariaComissaoLicitacao, LinkArquivo, CodigoContrato, CodigoPL.
 #> ── Dictionary ──────────────────────────────────────────────────────────────────
 #> # A tibble: 26 × 3
-#>    name                type      description                              
-#>  * <chr>               <chr>     <chr>                                    
-#>  1 UnidadeGestora      character Unidade Gestora                          
-#>  2 UnidadeOrcamentaria character Unidade Gestora da SCA_LicitacoesDetalhes
-#>  3 Esfera              character Esfera (E -Estadual ou M - Municipal)    
-#>  4 Municipio           character Município                                
-#>  5 NumeroContrato      character Número do Contrato                       
-#>  6 AnoContrato         character Ano do Contrato                          
-#>  7 TipoProcesso        character Tipo do Processo                         
-#>  8 AnoProcesso         character Ano do Processo                          
-#>  9 CPF_CNPJ            character CPF ou CNPJ do Contratado                
-#> 10 TipoDocumento       character Tipo do Documento do Contratado          
+#>    name                type    description                              
+#>  * <chr>               <chr>   <chr>                                    
+#>  1 UnidadeGestora      string  Unidade Gestora                          
+#>  2 UnidadeOrcamentaria string  Unidade Gestora da SCA_LicitacoesDetalhes
+#>  3 Esfera              string  Esfera (E -Estadual ou M - Municipal)    
+#>  4 Municipio           string  Município                                
+#>  5 NumeroContrato      string  Número do Contrato                       
+#>  6 AnoContrato         numeric Ano do Contrato                          
+#>  7 TipoProcesso        string  Tipo do Processo                         
+#>  8 AnoProcesso         numeric Ano do Processo                          
+#>  9 CPF_CNPJ            string  CPF ou CNPJ do Contratado                
+#> 10 TipoDocumento       string  Tipo do Documento do Contratado          
 #> # ℹ 16 more rows
 tce_fields("Municipios")
 #> ── Municipios has 5 fields: ────────────────────────────────────────────────────
 #> ℹ CODIGO, UNIDADEFEDERATIVA, MUNICIPIO, CODIGOSAGRES, CODIGOIBGE.
 #> ── Dictionary ──────────────────────────────────────────────────────────────────
 #> # A tibble: 5 × 3
-#>   name              type      description        
-#> * <chr>             <chr>     <chr>              
-#> 1 CODIGO            character Código do município
-#> 2 UNIDADEFEDERATIVA character Unidade federativa 
-#> 3 MUNICIPIO         character Nome do município  
-#> 4 CODIGOSAGRES      character Código do Sagres   
-#> 5 CODIGOIBGE        character Código do IBGE     
+#>   name              type    description        
+#> * <chr>             <chr>   <chr>              
+#> 1 CODIGO            string  Código do município
+#> 2 UNIDADEFEDERATIVA string  Unidade federativa 
+#> 3 MUNICIPIO         string  Nome do município  
+#> 4 CODIGOSAGRES      numeric Código do Sagres   
+#> 5 CODIGOIBGE        numeric Código do IBGE     
 ```

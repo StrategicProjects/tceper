@@ -43,6 +43,7 @@ Other remessa:
 [`tce_legal_instrument_documents()`](https://strategicprojects.github.io/tceper/reference/tce_legal_instrument_documents.md),
 [`tce_legal_instrument_items()`](https://strategicprojects.github.io/tceper/reference/tce_legal_instrument_items.md),
 [`tce_legal_instrument_participants()`](https://strategicprojects.github.io/tceper/reference/tce_legal_instrument_participants.md),
+[`tce_legal_instrument_terms()`](https://strategicprojects.github.io/tceper/reference/tce_legal_instrument_terms.md),
 [`tce_legal_instruments()`](https://strategicprojects.github.io/tceper/reference/tce_legal_instruments.md),
 [`tce_procurement_process_budget()`](https://strategicprojects.github.io/tceper/reference/tce_procurement_process_budget.md),
 [`tce_procurement_process_participants()`](https://strategicprojects.github.io/tceper/reference/tce_procurement_process_participants.md),

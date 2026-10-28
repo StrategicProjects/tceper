@@ -15,7 +15,7 @@ all procurement-related endpoints.}
 A tibble with columns \code{endpoint}, \code{group}, \code{title}, and \code{url}.
 }
 \description{
-Returns a tibble listing all 71 endpoints available in the TCE-PE Open
+Returns a tibble listing all 72 endpoints available in the TCE-PE Open
 Data API, with their group, description and URL. Use \code{search} to filter
 by keyword.
 }

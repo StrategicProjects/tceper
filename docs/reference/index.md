@@ -222,6 +222,8 @@ procurement processes and public works.
   : Legal instrument items (Remessa)
 - [`tce_legal_instrument_participants()`](https://strategicprojects.github.io/tceper/reference/tce_legal_instrument_participants.md)
   : Legal instrument participants (Remessa)
+- [`tce_legal_instrument_terms()`](https://strategicprojects.github.io/tceper/reference/tce_legal_instrument_terms.md)
+  : Legal instrument terms (Remessa)
 - [`tce_procurement_processes()`](https://strategicprojects.github.io/tceper/reference/tce_procurement_processes.md)
   : Procurement processes (Remessa)
 - [`tce_procurement_process_documents()`](https://strategicprojects.github.io/tceper/reference/tce_procurement_process_documents.md)

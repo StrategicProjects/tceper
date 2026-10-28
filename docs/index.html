@@ -35,7 +35,7 @@
 
     <a class="navbar-brand me-2" href="index.html">tceper</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.4</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.5</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,7 +75,7 @@
 <!-- badges: start -->
 
 <p><code>tceper</code> is an R client for the <a href="https://www.tce.pe.gov.br/" class="external-link">TCE-PE</a> (Tribunal de Contas do Estado de Pernambuco) Open Data API.</p>
-<p>The package wraps <strong>71 API endpoints</strong> into user-friendly functions that accept <code>snake_case</code> parameter names and return tibbles. A built-in catalog lets you discover endpoints, inspect their input parameters and output fields — all without leaving R.</p>
+<p>The package wraps <strong>72 API endpoints</strong> into user-friendly functions that accept <code>snake_case</code> parameter names and return tibbles. A built-in catalog lets you discover endpoints, inspect their input parameters and output fields — all without leaving R.</p>
 <table class="table warning-banner"><tr>
 <td>
 ⚠️ <strong class="warning-title">Warning</strong><br> The TCE-PE API (<code>sistemas.tcepe.tc.br</code>) is <strong>geo-restricted</strong> and only accessible from Brazilian IP addresses. If you are outside Brazil, API queries will time out. The discovery functions <code><a href="reference/tce_catalog.html">tce_catalog()</a></code>, <code><a href="reference/tce_params.html">tce_params()</a></code> and <code><a href="reference/tce_fields.html">tce_fields()</a></code> work offline anywhere, as they read from the built-in catalog.
@@ -89,14 +89,18 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
+<p>Install the released version from CRAN:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tceper"</span><span class="op">)</span></span></code></pre></div>
+<p>Or the development version from GitHub:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"StrategicProjects/tceper"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="quick-start">Quick start<a class="anchor" aria-label="anchor" href="#quick-start"></a>
 </h2>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://strategicprojects.github.io/tceper/">tceper</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># 1. Discover endpoints</span></span>
@@ -117,9 +121,9 @@
 <div class="section level3">
 <h3 id="id_1-browse-the-catalog">1. Browse the catalog<a class="anchor" aria-label="anchor" href="#id_1-browse-the-catalog"></a>
 </h3>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/tce_catalog.html">tce_catalog</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 71 × 4</span></span>
+<span><span class="co">#&gt; # A tibble: 72 × 4</span></span>
 <span><span class="co">#&gt;    endpoint               group          title                         url</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;                  &lt;chr&gt;          &lt;chr&gt;                         &lt;chr&gt;</span></span>
 <span><span class="co">#&gt;  1 ReceitasEstaduais      Receitas       Receitas Estaduais            …</span></span>
@@ -131,28 +135,28 @@
 <div class="section level3">
 <h3 id="id_2-inspect-input-parameters">2. Inspect input parameters<a class="anchor" aria-label="anchor" href="#id_2-inspect-input-parameters"></a>
 </h3>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/tce_params.html">tce_params</a></span><span class="op">(</span><span class="st">"Contratos"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ── Contratos has 23 parameters: ──────────────────────────────</span></span>
+<span><span class="co">#&gt; ── Contratos has 24 parameters: ──────────────────────────────</span></span>
 <span><span class="co">#&gt; ℹ unidade_gestora, unidade_orcamentaria, esfera, …</span></span>
 <span><span class="co">#&gt; ── Dictionary ────────────────────────────────────────────────</span></span>
-<span><span class="co">#&gt; # A tibble: 23 × 5</span></span>
-<span><span class="co">#&gt;    api_name      r_name          required type      description</span></span>
-<span><span class="co">#&gt;    &lt;chr&gt;         &lt;chr&gt;           &lt;lgl&gt;    &lt;chr&gt;     &lt;chr&gt;</span></span>
-<span><span class="co">#&gt;  1 UnidadeGesto… unidade_gestor… FALSE    character Unidade Gestora</span></span>
+<span><span class="co">#&gt; # A tibble: 24 × 5</span></span>
+<span><span class="co">#&gt;    api_name      r_name          required type   description</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;         &lt;chr&gt;           &lt;lgl&gt;    &lt;chr&gt;  &lt;chr&gt;</span></span>
+<span><span class="co">#&gt;  1 UnidadeGesto… unidade_gestor… FALSE    string Unidade Gestora</span></span>
 <span><span class="co">#&gt;  …</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="id_3-inspect-output-fields">3. Inspect output fields<a class="anchor" aria-label="anchor" href="#id_3-inspect-output-fields"></a>
 </h3>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/tce_fields.html">tce_fields</a></span><span class="op">(</span><span class="st">"Contratos"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="id_4-query">4. Query<a class="anchor" aria-label="anchor" href="#id_4-query"></a>
 </h3>
 <p>Use <code>snake_case</code> names (from <code>r_name</code>) or the original API names — both work:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># These are equivalent:</span></span>
 <span><span class="fu"><a href="reference/tce_contracts.html">tce_contracts</a></span><span class="op">(</span>codigo_efisco_ug <span class="op">=</span> <span class="st">"510101"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/tce_contracts.html">tce_contracts</a></span><span class="op">(</span>CodigoEfiscoUG <span class="op">=</span> <span class="st">"510101"</span><span class="op">)</span></span>
@@ -165,21 +169,21 @@
 <h2 id="verbose-mode">Verbose mode<a class="anchor" aria-label="anchor" href="#verbose-mode"></a>
 </h2>
 <p>When <code>verbose = TRUE</code>, the package prints the final API URL and helper commands for inspecting the endpoint:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/tce_contracts.html">tce_contracts</a></span><span class="op">(</span>codigo_efisco_ug <span class="op">=</span> <span class="st">"510101"</span>, verbose <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ℹ API URL: https://sistemas.tcepe.tc.br/DadosAbertos/Contratos!json?CodigoEfiscoUG=510101</span></span>
 <span><span class="co">#&gt; ℹ To inspect this endpoint:</span></span>
 <span><span class="co">#&gt;     - Input parameters: tce_params("Contratos")</span></span>
 <span><span class="co">#&gt;     - Output fields: tce_fields("Contratos")</span></span></code></pre></div>
 <p>Enable globally:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>tceper.verbose <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="cache">Cache<a class="anchor" aria-label="anchor" href="#cache"></a>
 </h2>
-<p>All 71 wrapper functions cache results in memory, keyed by endpoint + parameters. Default TTL is 1 hour.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<p>All 72 wrapper functions cache results in memory, keyed by endpoint + parameters. Default TTL is 1 hour.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/tce_contracts.html">tce_contracts</a></span><span class="op">(</span>codigo_efisco_ug <span class="op">=</span> <span class="st">"510101"</span><span class="op">)</span>       <span class="co"># hits the API</span></span>
 <span><span class="fu"><a href="reference/tce_contracts.html">tce_contracts</a></span><span class="op">(</span>codigo_efisco_ug <span class="op">=</span> <span class="st">"510101"</span><span class="op">)</span>       <span class="co"># cache hit (instant)</span></span>
 <span><span class="fu"><a href="reference/tce_contracts.html">tce_contracts</a></span><span class="op">(</span>codigo_efisco_ug <span class="op">=</span> <span class="st">"510102"</span><span class="op">)</span>       <span class="co"># different key → hits the API</span></span>
@@ -193,7 +197,7 @@
 <h2 id="parameter-validation">Parameter validation<a class="anchor" aria-label="anchor" href="#parameter-validation"></a>
 </h2>
 <p>The package validates query parameters against the catalog. If you pass a parameter that doesn’t exist for that endpoint, it aborts with a helpful error listing the allowed parameters:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/tce_contracts.html">tce_contracts</a></span><span class="op">(</span>xyz <span class="op">=</span> <span class="st">"foo"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ✖ Unknown query parameter(s) for endpoint Contratos: xyz</span></span>
 <span><span class="co">#&gt; ℹ Allowed parameters:</span></span>
@@ -228,7 +232,7 @@
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span></span>
 <span>  tceper.verbose  <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  tceper.progress <span class="op">=</span> <span class="cn">FALSE</span>,</span>
@@ -239,7 +243,7 @@
 <h2 id="api-limits">API limits<a class="anchor" aria-label="anchor" href="#api-limits"></a>
 </h2>
 <p>The API returns at most <strong>100,000 records</strong> per request. When this limit is reached, the package issues a warning. Use filters to narrow your query:</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/tce_municipal_expenditures.html">tce_municipal_expenditures</a></span><span class="op">(</span></span>
 <span>  codigo_municipio <span class="op">=</span> <span class="st">"P113"</span>,</span>
 <span>  ano_referencia   <span class="op">=</span> <span class="st">"2025"</span></span>
@@ -249,7 +253,7 @@
 <h2 id="direct-access">Direct access<a class="anchor" aria-label="anchor" href="#direct-access"></a>
 </h2>
 <p>If you prefer to pass API parameter names directly, use <code><a href="reference/tce_request.html">tce_request()</a></code>:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/tce_request.html">tce_request</a></span><span class="op">(</span><span class="st">"Contratos"</span>, CodigoEfiscoUG <span class="op">=</span> <span class="st">"510101"</span>, AnoContrato <span class="op">=</span> <span class="st">"2025"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -282,11 +286,12 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Andre Leite <br><small class="roles"> Author, maintainer </small>   </li>
-<li>Marcos Wasilew <br><small class="roles"> Author </small>   </li>
-<li>Hugo Vasconcelos <br><small class="roles"> Author </small>   </li>
-<li>Carlos Amorin <br><small class="roles"> Author </small>   </li>
-<li>Diogo Bezerra <br><small class="roles"> Author </small>   </li>
+<li>André Leite <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-4718-9766" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<li>Marcos Wasiliew <br><small class="roles"> Author </small> <a href="https://orcid.org/0009-0004-4694-3159" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<li>Hugo Vasconcelos <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0001-6249-0920" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<li>Carlos Amorim <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0001-6315-8305" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<li>Diogo Bezerra <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-1216-8674" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<li>Júlia Nascimento Barreto <br><small class="roles"> Author </small> <a href="https://orcid.org/0009-0004-2851-7770" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
 </ul>
 </div>
 
@@ -302,7 +307,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Andre Leite, Marcos Wasilew, Hugo Vasconcelos, Carlos Amorin, Diogo Bezerra.</p>
+  <p>Developed by André Leite, Marcos Wasiliew, Hugo Vasconcelos, Carlos Amorim, Diogo Bezerra, Júlia Nascimento Barreto.</p>
 </div>
 
 <div class="pkgdown-footer-right">
