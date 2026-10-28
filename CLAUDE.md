@@ -6,12 +6,15 @@ functions.
 
 ## Current status
 
-**0.1.5 submitted to CRAN on 2026-10-28, awaiting acceptance**
-(previous: 0.1.4 published 2026-06-01). Everything is committed and
-pushed (`3e0be1c` on master); the pkgdown site is live at 0.1.5. **The
-only pending step is tagging `v0.1.5` once the CRAN acceptance email
-arrives** (nothing else — don't re-submit). The email confirmation link
-was clicked; the tarball was last seen in CRAN `incoming/pretest/`.
+**0.1.5 submitted to CRAN on 2026-10-28, pending manual inspection**
+(previous: 0.1.4 published 2026-06-01). Pretest passed (Windows +
+Debian) with 1 NOTE each: "(possibly) invalid URLs" — timeouts on the
+geo-restricted TCE-PE hosts. That NOTE is expected on every release
+(CRAN's checker is outside Brazil) and the policy note in
+`cran-comments.md` preempts it; never "fix" the URLs. Everything is
+committed and pushed (`3e0be1c` on master); the pkgdown site is live at
+0.1.5. **The only pending step is tagging `v0.1.5` once the CRAN
+acceptance email arrives** (nothing else — don't re-submit).
 
 What 0.1.5 contains: an API sweep (all 72 `Exemplo!detalhar` pages
 re-scraped and diffed against the packaged catalog) found one new
